@@ -29,7 +29,7 @@ public class Calculator {
                 result = number1 + number2;
                 System.out.println(number1 + " + " + number2 + " = " + result);
                 break;
-
+                
             // performs subtraction between numbers
             case '-':
                 result = number1 - number2;
