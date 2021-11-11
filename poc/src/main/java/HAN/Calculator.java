@@ -23,7 +23,6 @@ public class Calculator {
         number2 = input.nextDouble();
 
         switch (operator) {
-                
             // performs subtraction between numbers
             case '-':
                 result = number1 - number2;
