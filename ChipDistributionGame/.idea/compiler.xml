@@ -8,15 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SessionManager" />
         <module name="GameStatistics" />
-        <module name="ViewProvider" />
         <module name="GameruleProvider" />
         <module name="ActiveGame" />
         <module name="IntelligentAgentCompiler" />
         <module name="EventHandler" />
         <module name="EntityManager" />
-        <module name="GameMasterProvider" />
-        <module name="Database" />
         <module name="NetworkHandler" />
+        <module name="ViewProvider" />
+        <module name="Database" />
+        <module name="GameMasterProvider" />
         <module name="GameModeProvider" />
         <module name="ClientSettingProvider" />
       </profile>
