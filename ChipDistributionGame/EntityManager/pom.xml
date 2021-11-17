@@ -11,13 +11,19 @@
 
     <artifactId>EntityManager</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>nl.han.asdb</groupId>
-            <artifactId>EventHandler</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+    <packaging>pom</packaging>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>nl.han.asdb</groupId>
+                <artifactId>EventHandler</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
 
 </project>
