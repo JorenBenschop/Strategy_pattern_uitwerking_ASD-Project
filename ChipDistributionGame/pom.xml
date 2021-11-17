@@ -19,7 +19,7 @@
         <module>ClientSettingProvider</module>
         <module>GameruleProvider</module>
         <module>GameMasterProvider</module>
-        <module>GamemodeProvider</module>
+        <module>GameModeProvider</module>
         <module>IntelligentAgentCompiler</module>
         <module>Database</module>
         <module>GameModeProvider</module>
