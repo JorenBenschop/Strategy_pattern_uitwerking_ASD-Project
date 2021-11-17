@@ -22,7 +22,6 @@
         <module>GameModeProvider</module>
         <module>IntelligentAgentCompiler</module>
         <module>Database</module>
-        <module>GameModeProvider</module>
     </modules>
 
 </project>
