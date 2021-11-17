@@ -15,6 +15,7 @@
         <maven.compiler.target>16</maven.compiler.target>
         <java.version>16</java.version>
     </properties>
+
     <modules>
         <module>EventHandler</module>
         <module>NetworkHandler</module>
@@ -31,8 +32,27 @@
         <module>Database</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>LATEST</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>16</source>
+                    <target>16</target>
+                    <release>16</release>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
