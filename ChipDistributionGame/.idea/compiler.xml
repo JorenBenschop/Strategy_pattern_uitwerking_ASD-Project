@@ -6,19 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SessionManager" />
-        <module name="GameStatistics" />
-        <module name="GameruleProvider" />
-        <module name="ActiveGame" />
-        <module name="IntelligentAgentCompiler" />
-        <module name="EventHandler" />
-        <module name="EntityManager" />
         <module name="NetworkHandler" />
-        <module name="ViewProvider" />
-        <module name="Database" />
-        <module name="GameMasterProvider" />
-        <module name="GameModeProvider" />
-        <module name="ClientSettingProvider" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="13" />

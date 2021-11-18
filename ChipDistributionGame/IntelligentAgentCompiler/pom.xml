@@ -11,5 +11,6 @@
 
     <artifactId>IntelligentAgentCompiler</artifactId>
 
+    <packaging>pom</packaging>
 
 </project>

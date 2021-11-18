@@ -11,5 +11,6 @@
 
     <artifactId>ViewProvider</artifactId>
 
+    <packaging>pom</packaging>
 
 </project>

@@ -12,6 +12,6 @@ public class Main {
         System.out.println(nl.han.asb.entitymanager.Main.test());
     }
     public static String test(){
-        return "session manager";
+        return "session manager hurrduuurr";
     }
 }
