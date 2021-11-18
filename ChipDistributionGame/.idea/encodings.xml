@@ -12,6 +12,7 @@
     <file url="file://$PROJECT_DIR$/GameruleProvider/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/IntelligentAgentCompiler/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/NetworkHandler/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/NetworkHandler/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SessionManager/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ViewProvider/src/main/java" charset="UTF-8" />
   </component>

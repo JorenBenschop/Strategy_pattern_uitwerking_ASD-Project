@@ -9,6 +9,8 @@
         <module name="NetworkHandler" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="13" />
+    <bytecodeTargetLevel target="13">
+      <module name="NetworkHandler" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

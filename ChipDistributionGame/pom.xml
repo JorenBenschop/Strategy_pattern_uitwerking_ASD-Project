@@ -18,7 +18,6 @@
 
     <modules>
         <module>EventHandler</module>
-        <module>NetworkHandler</module>
         <module>EntityManager</module>
         <module>SessionManager</module>
         <module>ViewProvider</module>
@@ -30,6 +29,7 @@
         <module>GameModeProvider</module>
         <module>IntelligentAgentCompiler</module>
         <module>Database</module>
+        <module>NetworkHandler</module>
     </modules>
 
     <dependencies>
