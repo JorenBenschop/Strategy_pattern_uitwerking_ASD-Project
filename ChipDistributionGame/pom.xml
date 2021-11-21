@@ -27,9 +27,10 @@
         <module>GameruleProvider</module>
         <module>GameMasterProvider</module>
         <module>GameModeProvider</module>
-        <module>IntelligentAgentCompiler</module>
+        <module>AgentCompiler</module>
         <module>Database</module>
-        <module>NetworkHandler</module>
+        <module>AgentHostService</module>
+        <module>Shared</module>
     </modules>
 
     <dependencies>
