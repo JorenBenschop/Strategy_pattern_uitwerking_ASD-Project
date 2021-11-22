@@ -2,3 +2,18 @@
 .idea/**
 
 .DS_Store
+/ChipDistributionGame/ActiveGame/target/
+/ChipDistributionGame/AgentCompiler/target/
+/ChipDistributionGame/AgentHostService/target/
+/ChipDistributionGame/ClientSettingProvider/target/
+/ChipDistributionGame/Database/target/
+/ChipDistributionGame/EntityManager/target/
+/ChipDistributionGame/EventHandler/target/
+/ChipDistributionGame/GameMasterProvider/target/
+/ChipDistributionGame/GameModeProvider/target/
+/ChipDistributionGame/GameruleProvider/target/
+/ChipDistributionGame/GameStatistics/target/
+/ChipDistributionGame/NetworkHandler/target/
+/ChipDistributionGame/SessionManager/target/
+/ChipDistributionGame/Shared/target/
+/ChipDistributionGame/ViewProvider/target/
