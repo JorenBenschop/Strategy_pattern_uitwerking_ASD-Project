@@ -17,27 +17,28 @@
     </properties>
 
     <modules>
+        <module>Shared</module>
+        <module>Database</module>
+        <module>GameMasterProvider</module>
+        <module>GameruleProvider</module>
+        <module>GameModeProvider</module>
+        <module>ClientSettingProvider</module>
+        <module>NetworkHandler</module>
+        <module>AgentHostService</module>
+        <module>AgentCompiler</module>
         <module>EventHandler</module>
         <module>EntityManager</module>
         <module>SessionManager</module>
         <module>ViewProvider</module>
         <module>GameStatistics</module>
         <module>ActiveGame</module>
-        <module>ClientSettingProvider</module>
-        <module>GameruleProvider</module>
-        <module>GameMasterProvider</module>
-        <module>GameModeProvider</module>
-        <module>AgentCompiler</module>
-        <module>Database</module>
-        <module>AgentHostService</module>
-        <module>Shared</module>
     </modules>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
-            <version>LATEST</version>
+            <version>3.8.1</version>
         </dependency>
     </dependencies>
 
@@ -46,7 +47,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
+                <version>3.8.1</version>
                 <configuration>
                     <source>17</source>
                     <target>17</target>
