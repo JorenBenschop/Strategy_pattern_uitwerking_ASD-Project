@@ -13,8 +13,9 @@ public class AgentDTO {
     public AgentDTO() {
     }
 
-    public AgentDTO(UUID agentId, List<AgentRuleDTO> agentRules) {
+    public AgentDTO(UUID agentId, UUID playerId, List<AgentRuleDTO> agentRules) {
         this.agentId = agentId;
+        this.playerId = playerId;
         this.agentRules = agentRules;
     }
 
