@@ -20,7 +20,7 @@ public class SellChipsEvent {
     }
 
     public void setSellerUUID(String sellerUUID) {
-        BuyerUUID = sellerUUID;
+        this.BuyerUUID = sellerUUID;
     }
 
     public short getAmount() {
@@ -28,7 +28,7 @@ public class SellChipsEvent {
     }
 
     public void setAmount(short amount) {
-        Amount = amount;
+        this.Amount = amount;
     }
 
     public short getPricePerItem() {
@@ -36,7 +36,7 @@ public class SellChipsEvent {
     }
 
     public void setPricePerItem(short pricePerItem) {
-        PricePerItem = pricePerItem;
+        this.PricePerItem = pricePerItem;
     }
 
     public short getRound() {
@@ -44,6 +44,6 @@ public class SellChipsEvent {
     }
 
     public void setRound(short round) {
-        Round = round;
+        this.Round = round;
     }
 }

@@ -19,6 +19,6 @@ public class LeaveGameEvent {
     }
 
     public void setPeerIPs(List<String> peerIPs) {
-        PeerIPs = peerIPs;
+        this.PeerIPs = peerIPs;
     }
 }

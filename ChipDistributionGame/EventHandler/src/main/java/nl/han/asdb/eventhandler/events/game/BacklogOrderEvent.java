@@ -13,7 +13,7 @@ public class BacklogOrderEvent extends Event {
     }
 
     public void setSellerUUID(String sellerUUID) {
-        SellerUUID = sellerUUID;
+        this.SellerUUID = sellerUUID;
     }
 
     public String getBuyerUUID() {
@@ -21,7 +21,7 @@ public class BacklogOrderEvent extends Event {
     }
 
     public void setBuyerUUID(String buyerUUID) {
-        BuyerUUID = buyerUUID;
+        this.BuyerUUID = buyerUUID;
     }
 
     public short getBacklogAmount() {
@@ -29,7 +29,7 @@ public class BacklogOrderEvent extends Event {
     }
 
     public void setBacklogAmount(short backlogAmount) {
-        BacklogAmount = backlogAmount;
+        this.BacklogAmount = backlogAmount;
     }
 
     public short getRound() {
@@ -37,6 +37,6 @@ public class BacklogOrderEvent extends Event {
     }
 
     public void setRound(short round) {
-        Round = round;
+        this.Round = round;
     }
 }

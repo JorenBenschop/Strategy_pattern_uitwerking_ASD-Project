@@ -4,6 +4,7 @@ import java.util.*;
 
 public class JoinGameEvent {
     private String UUID;
+    private String GameUUID;
     private List<String> PeerIPs=new ArrayList<String>();
 
     public String getUUID() {
@@ -19,7 +20,7 @@ public class JoinGameEvent {
     }
 
     public void setPeerIPs(List<String> peerIPs) {
-        PeerIPs = peerIPs;
+        this.PeerIPs = peerIPs;
     }
 
     public String getGameUUID() {
@@ -27,8 +28,6 @@ public class JoinGameEvent {
     }
 
     public void setGameUUID(String gameUUID) {
-        GameUUID = gameUUID;
+        this.GameUUID = gameUUID;
     }
-
-    private String GameUUID;
 }

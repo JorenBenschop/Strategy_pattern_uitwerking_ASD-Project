@@ -9,7 +9,7 @@ public class GrabCardBasedOnChanceEvent {
     }
 
     public void setCalculatedChance(double calculatedChance) {
-        CalculatedChance = calculatedChance;
+        this.CalculatedChance = calculatedChance;
     }
 
     public short getRound() {
@@ -17,6 +17,6 @@ public class GrabCardBasedOnChanceEvent {
     }
 
     public void setRound(short round) {
-        Round = round;
+        this.Round = round;
     }
 }

@@ -9,7 +9,7 @@ public class GetGameStatisticsEvent {
     }
 
     public void setGameUUID(String gameUUID) {
-        GameUUID = gameUUID;
+        this.GameUUID = gameUUID;
     }
 
     public String getUUID() {

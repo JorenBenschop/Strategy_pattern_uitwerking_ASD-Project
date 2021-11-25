@@ -3,13 +3,15 @@ package nl.han.asdb.eventhandler.events.game;
 
 public class WithdrawMoneyEvent {
     private String TargetUUID;
+    private short Amount;
+    private short Round;
 
     public String getTargetUUID() {
         return TargetUUID;
     }
 
     public void setTargetUUID(String targetUUID) {
-        TargetUUID = targetUUID;
+        this.TargetUUID = targetUUID;
     }
 
     public short getAmount() {
@@ -17,7 +19,7 @@ public class WithdrawMoneyEvent {
     }
 
     public void setAmount(short amount) {
-        Amount = amount;
+        this.Amount = amount;
     }
 
     public short getRound() {
@@ -25,9 +27,6 @@ public class WithdrawMoneyEvent {
     }
 
     public void setRound(short round) {
-        Round = round;
+        this.Round = round;
     }
-
-    private short Amount;
-    private short Round;
 }

@@ -15,7 +15,7 @@ public class ChatEvent extends Event {
     }
 
     public void setRecipientUUID(String recipientUUID) {
-        RecipientUUID = recipientUUID;
+        this.RecipientUUID = recipientUUID;
     }
 
     public String getSenderUUID() {
@@ -23,7 +23,7 @@ public class ChatEvent extends Event {
     }
 
     public void setSenderUUID(String senderUUID) {
-        SenderUUID = senderUUID;
+        this.SenderUUID = senderUUID;
     }
 
     public String getChatText() {
@@ -31,7 +31,7 @@ public class ChatEvent extends Event {
     }
 
     public void setChatText(String chatText) {
-        ChatText = chatText;
+        this.ChatText = chatText;
     }
 
     public short getRound() {
@@ -39,7 +39,7 @@ public class ChatEvent extends Event {
     }
 
     public void setRound(short round) {
-        Round = round;
+        this.Round = round;
     }
 
     public Date getTijd() {

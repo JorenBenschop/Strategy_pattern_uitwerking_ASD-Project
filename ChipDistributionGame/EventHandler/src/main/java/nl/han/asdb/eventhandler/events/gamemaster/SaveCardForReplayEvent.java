@@ -9,7 +9,7 @@ public class SaveCardForReplayEvent {
     }
 
     public void setCard(String card) {
-        Card = card;
+        this.Card = card;
     }
 
     public short getRound() {
@@ -17,6 +17,6 @@ public class SaveCardForReplayEvent {
     }
 
     public void setRound(short round) {
-        Round = round;
+        this.Round = round;
     }
 }

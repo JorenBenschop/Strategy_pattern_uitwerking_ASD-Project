@@ -22,7 +22,7 @@ public class ConfigureGameEvent extends Event {
     }
 
     public void setPeerIPs(List<String> peerIPs) {
-        PeerIPs = peerIPs;
+        this.PeerIPs = peerIPs;
     }
 
     public HashMap<String, String> getSettings() {
@@ -30,6 +30,6 @@ public class ConfigureGameEvent extends Event {
     }
 
     public void setSettings(HashMap<String, String> settings) {
-        Settings = settings;
+        this.Settings = settings;
     }
 }
