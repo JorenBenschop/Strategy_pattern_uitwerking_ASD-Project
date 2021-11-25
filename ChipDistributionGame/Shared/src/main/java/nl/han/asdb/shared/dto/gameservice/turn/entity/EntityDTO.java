@@ -5,26 +5,27 @@ import nl.han.asdb.shared.dto.gameservice.turn.entity.delivery.DeliveryDTO;
 import nl.han.asdb.shared.dto.gameservice.turn.entity.order.OrderDTO;
 
 import java.util.List;
+import java.util.Queue;
 import java.util.UUID;
 
 public class EntityDTO {
 
     private UUID entityID;
-    private OrderDTO order;
+    //buy
+    private Queue<OrderDTO> incomingOrders;
+    //sell
     private DeliveryDTO delivery;
     private int currentStock;
     private List<BacklogDTO> backlog;
     private EntityKind entityKind;
     private EntityLocation entityLocation;
-
-
+    
     public EntityDTO() {
     }
 
-
-    public EntityDTO(UUID entityID, OrderDTO order, DeliveryDTO delivery, int currentStock, List<BacklogDTO> backlog, EntityKind entityKind, EntityLocation entityLocation) {
+    public EntityDTO(UUID entityID, Queue<OrderDTO> incomingOrders, DeliveryDTO delivery, int currentStock, List<BacklogDTO> backlog, EntityKind entityKind, EntityLocation entityLocation) {
         this.entityID = entityID;
-        this.order = order;
+        this.incomingOrders = incomingOrders;
         this.delivery = delivery;
         this.currentStock = currentStock;
         this.backlog = backlog;
@@ -40,12 +41,24 @@ public class EntityDTO {
         this.entityID = entityID;
     }
 
-    public OrderDTO getOrder() {
-        return order;
+    public Queue<OrderDTO> getIncomingOrders() {
+        return incomingOrders;
     }
 
-    public void setOrder(OrderDTO order) {
-        this.order = order;
+    public void setIncomingOrders(Queue<OrderDTO> incomingOrders) {
+        this.incomingOrders = incomingOrders;
+    }
+
+    public OrderDTO getFirstOrder() {
+        return incomingOrders.poll();
+    }
+
+    public OrderDTO peekFirstOrder() {
+        return incomingOrders.peek();
+    }
+
+    public void setNewIncomingOrder(OrderDTO order) {
+        incomingOrders.add(order);
     }
 
     public DeliveryDTO getDelivery() {
