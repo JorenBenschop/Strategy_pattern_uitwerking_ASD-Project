@@ -4,22 +4,22 @@ import nl.han.asdb.eventhandler.events.Event;
 import java.util.*;
 
 public class SychroniseGameEvent extends Event {
-    private String AgentUUID;
-    private List<String> PeerIPs=new ArrayList<String>();
+    private String agentUuid;
+    private List<String> peerIps =new ArrayList<String>();
 
     public String getAgentUUID() {
-        return AgentUUID;
+        return agentUuid;
     }
 
     public void setAgentUUID(String agentUUID) {
-        AgentUUID = agentUUID;
+        this.agentUuid = agentUUID;
     }
 
-    public List<String> getPeerIPs() {
-        return PeerIPs;
+    public List<String> getPeerIps() {
+        return peerIps;
     }
 
-    public void setPeerIPs(List<String> peerIPs) {
-        PeerIPs = peerIPs;
+    public void setPeerIps(List<String> peerIps) {
+        this.peerIps = peerIps;
     }
 }

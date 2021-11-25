@@ -3,13 +3,13 @@ package nl.han.asdb.eventhandler.events.agent;
 import nl.han.asdb.eventhandler.events.Event;
 
 public class GiveControlToAgentEvent extends Event{
-    private String AgentUUID;
+    private String agentUuid;
 
     public String getAgentUUID() {
-        return AgentUUID;
+        return agentUuid;
     }
 
     public void setAgentUUID(String agentUUID) {
-        AgentUUID = agentUUID;
+        this.agentUuid = agentUUID;
     }
 }

@@ -3,31 +3,31 @@ package nl.han.asdb.eventhandler.events.connections;
 import nl.han.asdb.eventhandler.events.Event;
 
 public class SearchForGameEvent extends Event {
-    private String PeerIP;
-    private String OwnIP;
-    private String PeerUUID;
+    private String peerIp;
+    private String ownIp;
+    private String peerUuid;
 
-    public String getPeerIP() {
-        return PeerIP;
+    public String getPeerIp() {
+        return peerIp;
     }
 
-    public void setPeerIP(String peerIP) {
-        PeerIP = peerIP;
+    public void setPeerIp(String peerIp) {
+        this.peerIp = peerIp;
     }
 
     public String getOwnIP() {
-        return OwnIP;
+        return ownIp;
     }
 
     public void setOwnIP(String ownIP) {
-        OwnIP = ownIP;
+        this.ownIp = ownIP;
     }
 
     public String getPeerUUID() {
-        return PeerUUID;
+        return peerUuid;
     }
 
     public void setPeerUUID(String peerUUID) {
-        PeerUUID = peerUUID;
+        this.peerUuid = peerUUID;
     }
 }
