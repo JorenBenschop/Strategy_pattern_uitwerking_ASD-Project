@@ -1,22 +1,22 @@
 package nl.han.asdb.eventhandler.events.gamemaster;
 
 public class GrabCardBasedOnChanceEvent {
-    private double CalculatedChance;
-    private short Round;
+    private double calculatedChance;
+    private short round;
 
     public double getCalculatedChance() {
-        return CalculatedChance;
+        return calculatedChance;
     }
 
     public void setCalculatedChance(double calculatedChance) {
-        this.CalculatedChance = calculatedChance;
+        this.calculatedChance = calculatedChance;
     }
 
     public short getRound() {
-        return Round;
+        return round;
     }
 
     public void setRound(short round) {
-        this.Round = round;
+        this.round = round;
     }
 }

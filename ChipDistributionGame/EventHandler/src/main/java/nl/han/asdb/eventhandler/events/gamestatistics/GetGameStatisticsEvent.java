@@ -1,22 +1,22 @@
 package nl.han.asdb.eventhandler.events.gamestatistics;
 
 public class GetGameStatisticsEvent {
-    private String GameUUID;
-    private String UUID;
+    private String gameUuid;
+    private String uuid;
 
-    public String getGameUUID() {
-        return GameUUID;
+    public String getGameUuid() {
+        return gameUuid;
     }
 
-    public void setGameUUID(String gameUUID) {
-        this.GameUUID = gameUUID;
+    public void setGameUuid(String gameUuid) {
+        this.gameUuid = gameUuid;
     }
 
-    public String getUUID() {
-        return UUID;
+    public String getUuid() {
+        return uuid;
     }
 
-    public void setUUID(String UUID) {
-        this.UUID = UUID;
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
     }
 }
