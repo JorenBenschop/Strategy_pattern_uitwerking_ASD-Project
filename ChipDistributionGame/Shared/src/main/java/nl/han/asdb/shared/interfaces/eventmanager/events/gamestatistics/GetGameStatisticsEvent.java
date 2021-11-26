@@ -1,22 +1,32 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.gamestatistics;
 
-public class GetGameStatisticsEvent {
-    private String gameUuid;
-    private String uuid;
+import java.util.UUID;
 
-    public String getGameUuid() {
+public class GetGameStatisticsEvent {
+    private UUID gameUuid;
+    private UUID uuid;
+
+    public GetGameStatisticsEvent(){
+    }
+
+    public GetGameStatisticsEvent(UUID gameUuid, UUID uuid) {
+        this.gameUuid = gameUuid;
+        this.uuid = uuid;
+    }
+
+    public UUID getGameUuid() {
         return gameUuid;
     }
 
-    public void setGameUuid(String gameUuid) {
+    public void setGameUuid(UUID gameUuid) {
         this.gameUuid = gameUuid;
     }
 
-    public String getUuid() {
+    public UUID getUuid() {
         return uuid;
     }
 
-    public void setUuid(String uuid) {
+    public void setUuid(UUID uuid) {
         this.uuid = uuid;
     }
 }

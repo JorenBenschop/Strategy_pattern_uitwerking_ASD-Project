@@ -4,6 +4,14 @@ public class SaveCardForReplayEvent {
     private String card;
     private short round;
 
+    public SaveCardForReplayEvent(){
+    }
+
+    public SaveCardForReplayEvent(String card, short round) {
+        this.card = card;
+        this.round = round;
+    }
+
     public String getCard() {
         return card;
     }

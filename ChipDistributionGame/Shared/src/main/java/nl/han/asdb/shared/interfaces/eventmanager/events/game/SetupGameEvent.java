@@ -1,14 +1,23 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 
+import java.util.UUID;
+
 public class SetupGameEvent {
-    private String uuid;
+    private UUID uuid;
     private String ip;
 
-    public String getUuid() {
+    public SetupGameEvent(){}
+
+    public SetupGameEvent(UUID uuid, String ip) {
+        this.uuid = uuid;
+        this.ip = ip;
+    }
+
+    public UUID getUuid() {
         return uuid;
     }
 
-    public void setUuid(String uuid) {
+    public void setUuid(UUID uuid) {
         this.uuid = uuid;
     }
 

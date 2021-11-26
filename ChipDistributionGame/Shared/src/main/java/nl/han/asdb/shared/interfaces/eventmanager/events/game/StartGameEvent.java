@@ -3,15 +3,23 @@ package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 import java.util.*;
 
 public class StartGameEvent {
-    private String uuid;
+    private UUID uuid;
     private String ip;
     private List<String> peerIPs =new ArrayList<String>();
 
-    public String getUuid() {
+    public StartGameEvent(){}
+
+    public StartGameEvent(UUID uuid, String ip, List<String> peerIPs) {
+        this.uuid = uuid;
+        this.ip = ip;
+        this.peerIPs = peerIPs;
+    }
+
+    public UUID getUuid() {
         return uuid;
     }
 
-    public void setUuid(String uuid) {
+    public void setUuid(UUID uuid) {
         this.uuid = uuid;
     }
 

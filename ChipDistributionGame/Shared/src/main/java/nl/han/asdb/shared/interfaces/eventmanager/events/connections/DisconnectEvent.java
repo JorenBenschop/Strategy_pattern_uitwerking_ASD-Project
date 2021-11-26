@@ -2,15 +2,24 @@ package nl.han.asdb.shared.interfaces.eventmanager.events.connections;
 
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
 
+import java.util.UUID;
+
 public class DisconnectEvent extends Event{
-    private String uuid;
+    private UUID uuid;
     private String ip;
 
-    public String getUuid() {
+    public DisconnectEvent(){
+    }
+
+    public DisconnectEvent(UUID uuid, String ip){
+        this.uuid = uuid;
+    }
+
+    public UUID getUuid() {
         return uuid;
     }
 
-    public void setUuid(String uuid) {
+    public void setUuid(UUID uuid) {
         this.uuid = uuid;
     }
 

@@ -2,10 +2,23 @@ package nl.han.asdb.shared.interfaces.eventmanager.events.connections;
 
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
 
+import java.util.UUID;
+
 public class RegisterConnectionEvent extends Event {
     private String peerIp;
     private String ownIp;
-    private String peerUuid;
+    private UUID peerUuid;
+
+    public RegisterConnectionEvent(){
+
+    }
+
+    public RegisterConnectionEvent(String peerIp, String ownIp, UUID peerUuid){
+        this.peerIp = peerIp;
+        this.ownIp = ownIp;
+        this.peerUuid = peerUuid;
+    }
+
 
     public String getPeerIP() {
         return peerIp;
@@ -23,11 +36,11 @@ public class RegisterConnectionEvent extends Event {
         this.ownIp = ownIp;
     }
 
-    public String getPeerUuid() {
+    public UUID getPeerUuid() {
         return peerUuid;
     }
 
-    public void setPeerUUID(String peerUuid) {
+    public void setPeerUUID(UUID peerUuid) {
         this.peerUuid = peerUuid;
     }
 }

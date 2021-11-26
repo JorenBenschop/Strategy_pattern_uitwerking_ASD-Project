@@ -2,25 +2,37 @@ package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
 
+import java.util.UUID;
+
 public class BacklogOrderEvent extends Event {
-    private String sellerUuid;
-    private String buyerUuid;
+    private UUID sellerUuid;
+    private UUID buyerUuid;
     private short backlogAmount;
     private short round;
 
-    public String getSellerUuid() {
+    public BacklogOrderEvent(){
+    }
+
+    public BacklogOrderEvent(UUID sellerUuid, UUID buyerUuid, short backlogAmount, short round) {
+        this.sellerUuid = sellerUuid;
+        this.buyerUuid = buyerUuid;
+        this.backlogAmount = backlogAmount;
+        this.round = round;
+    }
+
+    public UUID getSellerUuid() {
         return sellerUuid;
     }
 
-    public void setSellerUuid(String sellerUuid) {
+    public void setSellerUuid(UUID sellerUuid) {
         this.sellerUuid = sellerUuid;
     }
 
-    public String getBuyerUuid() {
+    public UUID getBuyerUuid() {
         return buyerUuid;
     }
 
-    public void setBuyerUuid(String buyerUuid) {
+    public void setBuyerUuid(UUID buyerUuid) {
         this.buyerUuid = buyerUuid;
     }
 

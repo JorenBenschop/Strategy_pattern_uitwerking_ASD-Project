@@ -4,6 +4,14 @@ public class GrabCardBasedOnChanceEvent {
     private double calculatedChance;
     private short round;
 
+    public GrabCardBasedOnChanceEvent(){
+    }
+
+    public GrabCardBasedOnChanceEvent(double calculatedChance, short round) {
+        this.calculatedChance = calculatedChance;
+        this.round = round;
+    }
+
     public double getCalculatedChance() {
         return calculatedChance;
     }

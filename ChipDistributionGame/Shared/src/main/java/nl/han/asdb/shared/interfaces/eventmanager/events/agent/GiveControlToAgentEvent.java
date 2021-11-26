@@ -2,14 +2,23 @@ package nl.han.asdb.shared.interfaces.eventmanager.events.agent;
 
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
 
-public class GiveControlToAgentEvent extends Event{
-    private String agentUuid;
+import java.util.UUID;
 
-    public String getAgentUUID() {
+public class GiveControlToAgentEvent extends Event{
+    private UUID agentUuid;
+
+    public GiveControlToAgentEvent(){
+    }
+
+    public GiveControlToAgentEvent(UUID agentUuid){
+        this.agentUuid = agentUuid;
+    }
+
+    public UUID getAgentUUID() {
         return agentUuid;
     }
 
-    public void setAgentUUID(String agentUUID) {
+    public void setAgentUUID(UUID agentUUID) {
         this.agentUuid = agentUUID;
     }
 }

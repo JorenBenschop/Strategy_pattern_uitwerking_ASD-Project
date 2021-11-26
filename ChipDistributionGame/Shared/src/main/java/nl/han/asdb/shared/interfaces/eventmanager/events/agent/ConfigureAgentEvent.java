@@ -1,16 +1,35 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.agent;
 
+import nl.han.asdb.shared.dto.agenthostservice.AgentDTO;
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
 
-public class ConfigureAgentEvent extends Event {
-    private String agentUuid;
-    //AgentCode.file + getter/setter
+import java.util.UUID;
 
-    public String getAgentUuid() {
+public class ConfigureAgentEvent extends Event {
+    private UUID agentUuid;
+    private AgentDTO agentDTO;
+
+    public ConfigureAgentEvent(){
+    }
+
+    public ConfigureAgentEvent(UUID agentUuid, AgentDTO agentDTO){
+        this.agentUuid = agentUuid;
+        this.agentDTO = agentDTO;
+    }
+
+    public UUID getAgentUuid() {
         return agentUuid;
     }
 
-    public void setAgentUuid(String agentUuid) {
+    public void setAgentUuid(UUID agentUuid) {
         this.agentUuid = agentUuid;
+    }
+
+    public AgentDTO getAgentDTO() {
+        return agentDTO;
+    }
+
+    public void setAgentDTO(AgentDTO agentDTO) {
+        this.agentDTO = agentDTO;
     }
 }

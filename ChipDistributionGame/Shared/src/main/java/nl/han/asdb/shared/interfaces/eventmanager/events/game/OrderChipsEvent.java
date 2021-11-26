@@ -1,25 +1,37 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 
+import java.util.UUID;
+
 public class OrderChipsEvent {
-    private String uuid;
-    private String sellerUuid;
+    private UUID uuid;
+    private UUID sellerUuid;
     private double amount;
     private double pricePerItem;
     private short round;
 
-    public String getUuid() {
+    public OrderChipsEvent(){}
+
+    public OrderChipsEvent(UUID uuid, UUID sellerUuid, double amount, double pricePerItem, short round) {
+        this.uuid = uuid;
+        this.sellerUuid = sellerUuid;
+        this.amount = amount;
+        this.pricePerItem = pricePerItem;
+        this.round = round;
+    }
+
+    public UUID getUuid() {
         return uuid;
     }
 
-    public void setUuid(String uuid) {
+    public void setUuid(UUID uuid) {
         this.uuid = uuid;
     }
 
-    public String getSellerUuid() {
+    public UUID getSellerUuid() {
         return sellerUuid;
     }
 
-    public void setSellerUuid(String sellerUuid) {
+    public void setSellerUuid(UUID sellerUuid) {
         this.sellerUuid = sellerUuid;
     }
 

@@ -3,15 +3,23 @@ package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 import java.util.*;
 
 public class JoinGameEvent {
-    private String uuid;
-    private String GameUuid;
+    private UUID uuid;
+    private UUID GameUuid;
     private List<String> peerIPs =new ArrayList<String>();
 
-    public String getUuid() {
+    public JoinGameEvent(){}
+
+    public JoinGameEvent(UUID uuid, UUID gameUuid, List<String> peerIPs) {
+        this.uuid = uuid;
+        GameUuid = gameUuid;
+        this.peerIPs = peerIPs;
+    }
+
+    public UUID getUuid() {
         return uuid;
     }
 
-    public void setUuid(String uuid) {
+    public void setUuid(UUID uuid) {
         this.uuid = uuid;
     }
 
@@ -23,11 +31,11 @@ public class JoinGameEvent {
         this.peerIPs = peerIPs;
     }
 
-    public String getGameUuid() {
+    public UUID getGameUuid() {
         return GameUuid;
     }
 
-    public void setGameUuid(String gameUuid) {
+    public void setGameUuid(UUID gameUuid) {
         this.GameUuid = gameUuid;
     }
 }

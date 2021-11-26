@@ -4,25 +4,36 @@ import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
 import java.util.*;
 
 public class ChatEvent extends Event {
-    private String recipientUuid;
-    private String senderUuid;
+    private UUID recipientUuid;
+    private UUID senderUuid;
     private String chatText;
     private short round;
     Date tijd = new Date();
 
-    public String getRecipientUuid() {
+    public ChatEvent(){
+    }
+
+    public ChatEvent(UUID recipientUuid, UUID senderUuid, String chatText, short round, Date tijd) {
+        this.recipientUuid = recipientUuid;
+        this.senderUuid = senderUuid;
+        this.chatText = chatText;
+        this.round = round;
+        this.tijd = tijd;
+    }
+
+    public UUID getRecipientUuid() {
         return recipientUuid;
     }
 
-    public void setRecipientUuid(String recipientUuid) {
+    public void setRecipientUuid(UUID recipientUuid) {
         this.recipientUuid = recipientUuid;
     }
 
-    public String getSenderUuid() {
+    public UUID getSenderUuid() {
         return senderUuid;
     }
 
-    public void setSenderUuid(String senderUuid) {
+    public void setSenderUuid(UUID senderUuid) {
         this.senderUuid = senderUuid;
     }
 
