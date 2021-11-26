@@ -12,7 +12,8 @@ public class ConfigureAgentEvent extends Event {
     public ConfigureAgentEvent(){
     }
 
-    public ConfigureAgentEvent(UUID agentUuid, AgentDTO agentDTO){
+    public ConfigureAgentEvent(UUID eventUuid, UUID agentUuid, AgentDTO agentDTO){
+        super(eventUuid);
         this.agentUuid = agentUuid;
         this.agentDTO = agentDTO;
     }

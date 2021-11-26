@@ -12,7 +12,8 @@ public class SearchForGameEvent extends Event {
     public SearchForGameEvent(){
     }
 
-    public SearchForGameEvent(String peerIp, String ownIp, UUID peerUuid) {
+    public SearchForGameEvent(UUID eventUuid, String peerIp, String ownIp, UUID peerUuid) {
+        super(eventUuid);
         this.peerIp = peerIp;
         this.ownIp = ownIp;
         this.peerUuid = peerUuid;

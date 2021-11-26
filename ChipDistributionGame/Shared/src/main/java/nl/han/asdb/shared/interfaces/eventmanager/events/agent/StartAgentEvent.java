@@ -10,7 +10,8 @@ public class StartAgentEvent extends Event{
     public StartAgentEvent(){
     }
 
-    public StartAgentEvent(UUID agentUuid){
+    public StartAgentEvent(UUID eventUuid, UUID agentUuid){
+        super(eventUuid);
         this.agentUuid = agentUuid;
     }
 

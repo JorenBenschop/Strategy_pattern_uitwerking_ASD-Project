@@ -12,7 +12,8 @@ public class ConfigureGameEvent extends Event {
     public ConfigureGameEvent(){
     }
 
-    public ConfigureGameEvent(UUID uuid, List<String> peerIPs, HashMap<String, String> settings) {
+    public ConfigureGameEvent(UUID eventUuid, UUID uuid, List<String> peerIPs, HashMap<String, String> settings) {
+        super(eventUuid);
         this.uuid = uuid;
         this.peerIPs = peerIPs;
         this.settings = settings;

@@ -1,13 +1,18 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.gamemaster;
 
-public class SaveCardForReplayEvent {
+import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+
+import java.util.UUID;
+
+public class SaveCardForReplayEvent extends Event{
     private String card;
     private short round;
 
     public SaveCardForReplayEvent(){
     }
 
-    public SaveCardForReplayEvent(String card, short round) {
+    public SaveCardForReplayEvent(UUID eventUuid, String card, short round) {
+        super(eventUuid);
         this.card = card;
         this.round = round;
     }

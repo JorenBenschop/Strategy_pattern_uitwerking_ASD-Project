@@ -1,13 +1,16 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 
+import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+
 import java.util.UUID;
 
-public class ReplayGameEvent {
+public class ReplayGameEvent extends Event {
     private UUID uuid;
 
     public ReplayGameEvent(){}
 
-    public ReplayGameEvent(UUID uuid) {
+    public ReplayGameEvent(UUID eventUuid, UUID uuid) {
+        super(eventUuid);
         this.uuid = uuid;
     }
 

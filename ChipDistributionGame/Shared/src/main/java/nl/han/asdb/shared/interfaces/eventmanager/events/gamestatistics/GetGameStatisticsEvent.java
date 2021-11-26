@@ -1,15 +1,17 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.gamestatistics;
 
+import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
 import java.util.UUID;
 
-public class GetGameStatisticsEvent {
+public class GetGameStatisticsEvent extends Event{
     private UUID gameUuid;
     private UUID uuid;
 
     public GetGameStatisticsEvent(){
     }
 
-    public GetGameStatisticsEvent(UUID gameUuid, UUID uuid) {
+    public GetGameStatisticsEvent(UUID eventUuid, UUID gameUuid, UUID uuid) {
+        super(eventUuid);
         this.gameUuid = gameUuid;
         this.uuid = uuid;
     }

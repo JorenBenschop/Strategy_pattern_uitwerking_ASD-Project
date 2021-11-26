@@ -13,7 +13,8 @@ public class RegisterConnectionEvent extends Event {
 
     }
 
-    public RegisterConnectionEvent(String peerIp, String ownIp, UUID peerUuid){
+    public RegisterConnectionEvent(UUID eventUuid, String peerIp, String ownIp, UUID peerUuid){
+        super(eventUuid);
         this.peerIp = peerIp;
         this.ownIp = ownIp;
         this.peerUuid = peerUuid;

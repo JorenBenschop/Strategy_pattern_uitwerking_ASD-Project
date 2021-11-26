@@ -1,5 +1,11 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.gamestatistics;
 
-public class ShowGameStatisticEvent {
+import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+import java.util.UUID;
 
+public class ShowGameStatisticEvent extends Event{
+
+    public ShowGameStatisticEvent(UUID eventUuid) {
+        super(eventUuid);
+    }
 }

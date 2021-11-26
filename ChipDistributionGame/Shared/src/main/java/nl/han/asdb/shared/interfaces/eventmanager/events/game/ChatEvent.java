@@ -13,7 +13,8 @@ public class ChatEvent extends Event {
     public ChatEvent(){
     }
 
-    public ChatEvent(UUID recipientUuid, UUID senderUuid, String chatText, short round, Date tijd) {
+    public ChatEvent(UUID eventUuid, UUID recipientUuid, UUID senderUuid, String chatText, short round, Date tijd) {
+        super(eventUuid);
         this.recipientUuid = recipientUuid;
         this.senderUuid = senderUuid;
         this.chatText = chatText;

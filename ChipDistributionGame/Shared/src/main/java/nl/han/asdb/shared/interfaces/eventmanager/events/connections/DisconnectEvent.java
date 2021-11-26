@@ -11,7 +11,8 @@ public class DisconnectEvent extends Event{
     public DisconnectEvent(){
     }
 
-    public DisconnectEvent(UUID uuid, String ip){
+    public DisconnectEvent(UUID eventUuid, UUID uuid, String ip){
+        super(eventUuid);
         this.uuid = uuid;
     }
 

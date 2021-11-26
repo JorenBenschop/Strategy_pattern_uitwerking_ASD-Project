@@ -1,8 +1,12 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 
+import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+
 import java.util.UUID;
 
-public class OrderChipsEvent {
+import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+
+public class OrderChipsEvent extends Event {
     private UUID uuid;
     private UUID sellerUuid;
     private double amount;
@@ -11,7 +15,8 @@ public class OrderChipsEvent {
 
     public OrderChipsEvent(){}
 
-    public OrderChipsEvent(UUID uuid, UUID sellerUuid, double amount, double pricePerItem, short round) {
+    public OrderChipsEvent(UUID eventUuid, UUID uuid, UUID sellerUuid, double amount, double pricePerItem, short round) {
+        super(eventUuid);
         this.uuid = uuid;
         this.sellerUuid = sellerUuid;
         this.amount = amount;

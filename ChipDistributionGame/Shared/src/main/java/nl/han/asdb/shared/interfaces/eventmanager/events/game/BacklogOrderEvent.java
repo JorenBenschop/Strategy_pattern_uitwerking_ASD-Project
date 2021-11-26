@@ -13,7 +13,8 @@ public class BacklogOrderEvent extends Event {
     public BacklogOrderEvent(){
     }
 
-    public BacklogOrderEvent(UUID sellerUuid, UUID buyerUuid, short backlogAmount, short round) {
+    public BacklogOrderEvent(UUID eventUuid, UUID sellerUuid, UUID buyerUuid, short backlogAmount, short round) {
+        super(eventUuid);
         this.sellerUuid = sellerUuid;
         this.buyerUuid = buyerUuid;
         this.backlogAmount = backlogAmount;

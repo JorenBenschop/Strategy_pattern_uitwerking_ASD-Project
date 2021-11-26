@@ -1,15 +1,19 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 
-import java.util.*;
+import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
-public class JoinGameEvent {
+public class JoinGameEvent extends Event{
     private UUID uuid;
     private UUID GameUuid;
     private List<String> peerIPs =new ArrayList<String>();
 
     public JoinGameEvent(){}
 
-    public JoinGameEvent(UUID uuid, UUID gameUuid, List<String> peerIPs) {
+    public JoinGameEvent(UUID eventUuid, UUID uuid, UUID gameUuid, List<String> peerIPs) {
+        super(eventUuid);
         this.uuid = uuid;
         GameUuid = gameUuid;
         this.peerIPs = peerIPs;

@@ -10,7 +10,8 @@ public class TakeControlFromAgentEvent extends Event {
     public TakeControlFromAgentEvent(){
     }
 
-    public TakeControlFromAgentEvent(UUID agentUuid){
+    public TakeControlFromAgentEvent(UUID eventUuid, UUID agentUuid){
+        super(eventUuid);
         this.agentUuid = agentUuid;
     }
 

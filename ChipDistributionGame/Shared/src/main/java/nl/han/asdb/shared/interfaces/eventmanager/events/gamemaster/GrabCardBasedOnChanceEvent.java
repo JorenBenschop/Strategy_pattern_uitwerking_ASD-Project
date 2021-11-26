@@ -1,13 +1,18 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.gamemaster;
 
-public class GrabCardBasedOnChanceEvent {
+import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+
+import java.util.UUID;
+
+public class GrabCardBasedOnChanceEvent extends Event{
     private double calculatedChance;
     private short round;
 
     public GrabCardBasedOnChanceEvent(){
     }
 
-    public GrabCardBasedOnChanceEvent(double calculatedChance, short round) {
+    public GrabCardBasedOnChanceEvent(UUID eventUuid, double calculatedChance, short round) {
+        super(eventUuid);
         this.calculatedChance = calculatedChance;
         this.round = round;
     }

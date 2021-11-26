@@ -1,14 +1,17 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 
+import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+
 import java.util.*;
 
-public class LeaveGameEvent {
+public class LeaveGameEvent extends Event {
     private UUID uuid;
     private List<String> peerIPs =new ArrayList<String>();
 
     public LeaveGameEvent(){}
 
-    public LeaveGameEvent(List<String> peerIPs) {
+    public LeaveGameEvent(UUID eventUuid, List<String> peerIPs) {
+        super(eventUuid);
         this.peerIPs = peerIPs;
     }
 
