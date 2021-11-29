@@ -12,7 +12,6 @@ import java.util.HashMap;
 public class Mocked_IEventManager implements IEventManager {
     private HashMap<Event, ArrayList<IListener>> listenersForEvents = new HashMap<>();
 
-
     @Override
     public void subscribe(Event event, IListener listener) {
         if(this.listenersForEvents.containsKey(event)){
@@ -40,9 +39,5 @@ public class Mocked_IEventManager implements IEventManager {
             return;
         }
         throw new ClassNotFoundException();
-    }
-    @Override
-    public ArrayList<IListener> t(Event e){
-        return this.listenersForEvents.get(e);
     }
 }
