@@ -1,11 +1,12 @@
 package nl.han.asdb.shared.interfaces.eventmanager;
 
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 
 import java.util.ArrayList;
 
 public interface IEventManager {
-    void subscribe(Event event, IListener listener);
-    void unsubscribe(Event event, IListener listener) throws ClassNotFoundException;
-    void notify(Event event) throws ClassNotFoundException;
+    void subscribe(EventType event, IListener listener);
+    void unsubscribe(EventType event, IListener listener) throws EventNotFoundException;
+    void notify(Event event) throws EventNotFoundException;
 }
