@@ -32,6 +32,7 @@
         <module>ViewProvider</module>
         <module>GameStatistics</module>
         <module>ActiveGame</module>
+        <module>IntegrationModule</module>
     </modules>
 
     <dependencies>
