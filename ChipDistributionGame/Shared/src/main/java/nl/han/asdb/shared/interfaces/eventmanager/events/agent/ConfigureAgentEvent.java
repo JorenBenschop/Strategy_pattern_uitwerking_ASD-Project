@@ -1,5 +1,6 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.agent;
 
+import jdk.jfr.EventType;
 import nl.han.asdb.shared.dto.agenthostservice.AgentDTO;
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
 
@@ -8,7 +9,7 @@ import java.util.UUID;
 public class ConfigureAgentEvent extends Event {
     private UUID agentUuid;
     private AgentDTO agentDTO;
-
+    private EventType eventType;
     public ConfigureAgentEvent(){
     }
 
