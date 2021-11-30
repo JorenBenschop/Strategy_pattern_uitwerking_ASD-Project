@@ -1,36 +1,38 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.agent;
 
-import jdk.jfr.EventType;
-import nl.han.asdb.shared.dto.agenthostservice.AgentDTO;
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 
 import java.util.UUID;
 
 public class ConfigureAgentEvent extends Event {
-    private UUID agentUuid;
-    private AgentDTO agentDTO;
+    private UUID playerId;
+    private String agentCode; // string
+
     public ConfigureAgentEvent(){
+        this.eventType = EventType.ConfigureAgentEvent;
     }
 
-    public ConfigureAgentEvent(UUID eventUuid, UUID agentUuid, AgentDTO agentDTO){
+    public ConfigureAgentEvent(UUID eventUuid, UUID agentUuid, String agentCode){
         super(eventUuid);
-        this.agentUuid = agentUuid;
-        this.agentDTO = agentDTO;
+        this.playerId = agentUuid;
+        this.agentCode = agentCode;
+        this.eventType = EventType.ConfigureAgentEvent;
     }
 
     public UUID getAgentUuid() {
-        return agentUuid;
+        return playerId;
     }
 
     public void setAgentUuid(UUID agentUuid) {
-        this.agentUuid = agentUuid;
+        this.playerId = agentUuid;
     }
 
-    public AgentDTO getAgentDTO() {
-        return agentDTO;
+    public String getAgentCode() {
+        return agentCode;
     }
 
-    public void setAgentDTO(AgentDTO agentDTO) {
-        this.agentDTO = agentDTO;
+    public void setAgentCode(String agentCode) {
+        this.agentCode = agentCode;
     }
 }
