@@ -5,13 +5,13 @@ import java.util.UUID;
 
 public class EntityDTO {
     private UUID entityId;
-    private Enum entityLocation;
+    private EntityLocation entityLocation;
     private List<EntityDTO> suppliers;
 
     public EntityDTO() {
     }
 
-    public EntityDTO(UUID entityId, Enum entityLocation, List<EntityDTO> suppliers) {
+    public EntityDTO(UUID entityId, EntityLocation entityLocation, List<EntityDTO> suppliers) {
         this.entityId = entityId;
         this.entityLocation = entityLocation;
         this.suppliers = suppliers;
@@ -25,11 +25,11 @@ public class EntityDTO {
         this.entityId = entityId;
     }
 
-    public Enum getEntityLocation() {
+    public EntityLocation getEntityLocation() {
         return entityLocation;
     }
 
-    public void setEntityLocation(Enum entityLocation) {
+    public void setEntityLocation(EntityLocation entityLocation) {
         this.entityLocation = entityLocation;
     }
 

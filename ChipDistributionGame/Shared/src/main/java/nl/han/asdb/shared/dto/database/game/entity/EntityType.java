@@ -1,6 +1,6 @@
 package nl.han.asdb.shared.dto.database.game.entity;
 
-public enum EntityKind {
+public enum EntityType {
     PLAYER,
     AGENT
 }

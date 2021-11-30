@@ -7,7 +7,7 @@ import java.util.List;
 public class GameDTO {
     private int gameId;
     private int numberOfRounds;
-    private Enum gameType;
+    private GameType gameType;
     private int maxTurnTime;
     private boolean isActive;
     private List<RoundDTO> rounds;
@@ -15,7 +15,7 @@ public class GameDTO {
     public GameDTO() {
     }
 
-    public GameDTO(int gameId, int numberOfRounds, Enum gameType, int maxTurnTime, boolean isActive, List<RoundDTO> rounds) {
+    public GameDTO(int gameId, int numberOfRounds, GameType gameType, int maxTurnTime, boolean isActive, List<RoundDTO> rounds) {
         this.gameId = gameId;
         this.numberOfRounds = numberOfRounds;
         this.gameType = gameType;
@@ -40,11 +40,11 @@ public class GameDTO {
         this.numberOfRounds = numberOfRounds;
     }
 
-    public Enum getGameType() {
+    public GameType getGameType() {
         return gameType;
     }
 
-    public void setGameType(Enum gameType) {
+    public void setGameType(GameType gameType) {
         this.gameType = gameType;
     }
 

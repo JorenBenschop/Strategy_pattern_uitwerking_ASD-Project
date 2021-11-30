@@ -1,5 +1,6 @@
 package nl.han.asdb.shared.dto.database.round.EntityActions;
 
+import nl.han.asdb.shared.dto.database.game.entity.EntityType;
 import nl.han.asdb.shared.dto.database.round.EntityActions.backlog.BacklogDTO;
 import nl.han.asdb.shared.dto.database.round.EntityActions.delivery.DeliveryDTO;
 import nl.han.asdb.shared.dto.database.round.EntityActions.order.OrderDTO;
@@ -9,7 +10,7 @@ import java.util.UUID;
 
 public class EntityActionsDTO {
     private UUID entityId;
-    private Enum entityType;
+    private EntityType entityType;
     private int stock;
     private int costs;
     private List<BacklogDTO> backlogs;
@@ -19,7 +20,7 @@ public class EntityActionsDTO {
     public EntityActionsDTO() {
     }
 
-    public EntityActionsDTO(UUID entityId, Enum entityType, int stock, int costs, List<BacklogDTO> backlogs, List<DeliveryDTO> deliveries, List<OrderDTO> orders) {
+    public EntityActionsDTO(UUID entityId, EntityType entityType, int stock, int costs, List<BacklogDTO> backlogs, List<DeliveryDTO> deliveries, List<OrderDTO> orders) {
         this.entityId = entityId;
         this.entityType = entityType;
         this.stock = stock;
@@ -37,11 +38,11 @@ public class EntityActionsDTO {
         this.entityId = entityId;
     }
 
-    public Enum getEntityType() {
+    public EntityType getEntityType() {
         return entityType;
     }
 
-    public void setEntityType(Enum entityType) {
+    public void setEntityType(EntityType entityType) {
         this.entityType = entityType;
     }
 
