@@ -50,16 +50,24 @@ public class AgentSellActionDTO implements IAgentActionDTO {
 
     @Override
     public void setRound(short round) {
-
+        this.round = round;
     }
 
     @Override
     public double getPricePerItem() {
-        return 0;
+        return pricePerItem;
     }
 
     @Override
     public void setPricePerItem(double price) {
+        this.pricePerItem = price;
+    }
 
+    public List<SellChipsEvent> getSellEventItemList() {
+        return sellEventItemList;
+    }
+
+    public void setSellEventItemList(List<SellChipsEvent> sellEventItemList) {
+        this.sellEventItemList = sellEventItemList;
     }
 }
