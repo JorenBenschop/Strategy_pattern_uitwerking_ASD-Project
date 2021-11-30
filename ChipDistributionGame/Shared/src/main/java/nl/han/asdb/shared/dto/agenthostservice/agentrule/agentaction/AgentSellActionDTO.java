@@ -15,7 +15,7 @@ public class AgentSellActionDTO implements IAgentActionDTO {
     public AgentSellActionDTO() {
     }
 
-    public AgentSellActionDTO(UUID sellerUuid, short amount, double pricePerItem, short round, List<SellChipsEvent> sellEventItemList) {
+    public AgentSellActionDTO(UUID sellerUuid, double amount, double pricePerItem, short round, List<SellChipsEvent> sellEventItemList) {
         this.sellerUuid = sellerUuid;
         this.amount = amount;
         this.pricePerItem = pricePerItem;
