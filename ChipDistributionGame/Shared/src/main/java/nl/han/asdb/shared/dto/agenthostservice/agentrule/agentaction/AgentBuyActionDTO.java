@@ -6,9 +6,17 @@ public class AgentBuyActionDTO implements IAgentActionDTO {
     private UUID buyerUuid;
     private int amount;
 
+    public AgentBuyActionDTO() {
+    }
+
+    public AgentBuyActionDTO(UUID buyerUuid, int amount) {
+        this.buyerUuid = buyerUuid;
+        this.amount = amount;
+    }
+
     @Override
     public int getAmount() {
-        return this.amount;
+        return amount;
     }
 
     @Override
@@ -18,7 +26,7 @@ public class AgentBuyActionDTO implements IAgentActionDTO {
 
     @Override
     public UUID getPerson() {
-        return this.buyerUuid;
+        return buyerUuid;
     }
 
     @Override

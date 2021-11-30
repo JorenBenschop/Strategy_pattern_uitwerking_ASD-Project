@@ -10,3 +10,4 @@ public interface IAgentActionDTO {
     UUID getPerson();
 
     void setUUID(UUID uuid);
+}
