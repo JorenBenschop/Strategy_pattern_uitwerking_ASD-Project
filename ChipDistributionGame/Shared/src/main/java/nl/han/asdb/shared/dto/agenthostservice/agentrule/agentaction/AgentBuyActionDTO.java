@@ -4,28 +4,30 @@ import java.util.UUID;
 
 public class AgentBuyActionDTO implements IAgentActionDTO {
     private UUID buyerUuid;
-    private int amount;
+    public double amount;
+    private double pricePerItem;
+    private short round;
 
-    public AgentBuyActionDTO() {
-    }
 
-    public AgentBuyActionDTO(UUID buyerUuid, int amount) {
+    public AgentBuyActionDTO(UUID buyerUuid, short amount, double pricePerItem, short round) {
         this.buyerUuid = buyerUuid;
         this.amount = amount;
+        this.pricePerItem = pricePerItem;
+        this.round = round;
     }
 
     @Override
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 
     @Override
-    public void setAmount(int amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
     @Override
-    public UUID getPerson() {
+    public UUID getUuid() {
         return buyerUuid;
     }
 
@@ -33,4 +35,26 @@ public class AgentBuyActionDTO implements IAgentActionDTO {
     public void setUUID(UUID uuid) {
         this.buyerUuid = uuid;
     }
+
+    @Override
+    public short getRound() {
+        return round;
+    }
+
+    @Override
+    public void setRound(short round) {
+        this.round = round;
+    }
+
+    @Override
+    public double getPricePerItem() {
+        return this.pricePerItem;
+    }
+
+    @Override
+    public void setPricePerItem(double price) {
+        this.pricePerItem = price;
+    }
+
+
 }
