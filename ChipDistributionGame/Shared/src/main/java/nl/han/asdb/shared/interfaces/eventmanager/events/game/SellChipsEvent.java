@@ -51,7 +51,7 @@ public class SellChipsEvent extends Event {
         return amount;
     }
 
-    public void setAmount(short amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
