@@ -1,4 +1,4 @@
-package nl.han.asdb.shared.dto;
+package nl.han.asdb.shared.dto.database.game.entity;
 
 import java.util.List;
 import java.util.UUID;

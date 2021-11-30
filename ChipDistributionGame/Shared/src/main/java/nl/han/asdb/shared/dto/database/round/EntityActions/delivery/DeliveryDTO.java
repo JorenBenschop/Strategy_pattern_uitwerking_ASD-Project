@@ -1,4 +1,4 @@
-package nl.han.asdb.shared.dto;
+package nl.han.asdb.shared.dto.database.round.EntityActions.delivery;
 
 import java.util.UUID;
 

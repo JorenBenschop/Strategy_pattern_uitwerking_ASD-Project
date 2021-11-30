@@ -1,4 +1,6 @@
-package nl.han.asdb.shared.dto;
+package nl.han.asdb.shared.dto.database.round;
+
+import nl.han.asdb.shared.dto.database.round.EntityActions.EntityActionsDTO;
 
 import java.util.List;
 

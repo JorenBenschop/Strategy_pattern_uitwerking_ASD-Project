@@ -1,4 +1,4 @@
-package nl.han.asdb.shared.dto;
+package nl.han.asdb.shared.dto.database.round.EntityActions.backlog;
 
 import java.util.UUID;
 
