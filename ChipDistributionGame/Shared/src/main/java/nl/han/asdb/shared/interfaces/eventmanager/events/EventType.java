@@ -23,5 +23,6 @@ public enum EventType {
     WithdrawMoneyEvent,
     GrabCardBasedOnChanceEvent,
     SaveCardForReplayEvent,
-    DeliveryEvent, AgentGoThroughRulesEvent,
+    DeliveryEvent,
+    AgentGoThroughRulesEvent,
 }

@@ -3,6 +3,7 @@ package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
 import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 
+import java.time.LocalDateTime;
 import java.util.*;
 
 public class ChatEvent extends Event {
@@ -10,13 +11,13 @@ public class ChatEvent extends Event {
     private UUID senderUuid;
     private String chatText;
     private short round;
-    Date time = new Date();
+    LocalDateTime time;
 
     public ChatEvent(){
         this.eventType = EventType.ChatEvent;
     }
 
-    public ChatEvent(UUID eventUuid, UUID recipientUuid, UUID senderUuid, String chatText, short round, Date time) {
+    public ChatEvent(UUID eventUuid, UUID recipientUuid, UUID senderUuid, String chatText, short round, LocalDateTime time) {
         super(eventUuid);
         this.recipientUuid = recipientUuid;
         this.senderUuid = senderUuid;
@@ -58,11 +59,11 @@ public class ChatEvent extends Event {
         this.round = round;
     }
 
-    public Date getTime() {
+    public LocalDateTime getTime() {
         return time;
     }
 
-    public void setTime(Date time) {
+    public void setTime(LocalDateTime time) {
         this.time = time;
     }
 }
