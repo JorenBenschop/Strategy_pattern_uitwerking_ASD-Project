@@ -16,4 +16,28 @@ public class EntityDTO {
         this.entityLocation = entityLocation;
         this.suppliers = suppliers;
     }
+
+    public UUID getEntityId() {
+        return entityId;
+    }
+
+    public void setEntityId(UUID entityId) {
+        this.entityId = entityId;
+    }
+
+    public Enum getEntityLocation() {
+        return entityLocation;
+    }
+
+    public void setEntityLocation(Enum entityLocation) {
+        this.entityLocation = entityLocation;
+    }
+
+    public List<EntityDTO> getSuppliers() {
+        return suppliers;
+    }
+
+    public void setSuppliers(List<EntityDTO> suppliers) {
+        this.suppliers = suppliers;
+    }
 }

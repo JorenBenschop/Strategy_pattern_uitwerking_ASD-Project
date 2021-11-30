@@ -15,4 +15,28 @@ public class DeliveryDTO {
         this.amount = amount;
         this.amountAsked = amountAsked;
     }
+
+    public UUID getReceiverId() {
+        return receiverId;
+    }
+
+    public void setReceiverId(UUID receiverId) {
+        this.receiverId = receiverId;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public int getAmountAsked() {
+        return amountAsked;
+    }
+
+    public void setAmountAsked(int amountAsked) {
+        this.amountAsked = amountAsked;
+    }
 }

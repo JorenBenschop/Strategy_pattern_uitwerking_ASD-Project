@@ -28,4 +28,60 @@ public class EntityActionsDTO {
         this.deliveries = deliveries;
         this.orders = orders;
     }
+
+    public UUID getEntityId() {
+        return entityId;
+    }
+
+    public void setEntityId(UUID entityId) {
+        this.entityId = entityId;
+    }
+
+    public Enum getEntityType() {
+        return entityType;
+    }
+
+    public void setEntityType(Enum entityType) {
+        this.entityType = entityType;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public int getCosts() {
+        return costs;
+    }
+
+    public void setCosts(int costs) {
+        this.costs = costs;
+    }
+
+    public List<BacklogDTO> getBacklogs() {
+        return backlogs;
+    }
+
+    public void setBacklogs(List<BacklogDTO> backlogs) {
+        this.backlogs = backlogs;
+    }
+
+    public List<DeliveryDTO> getDeliveries() {
+        return deliveries;
+    }
+
+    public void setDeliveries(List<DeliveryDTO> deliveries) {
+        this.deliveries = deliveries;
+    }
+
+    public List<OrderDTO> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<OrderDTO> orders) {
+        this.orders = orders;
+    }
 }
