@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.UUID;
 
 public interface IActiveGameInfoProvider {
-    UUID getCurrentGameID();
-    List<TurnDTO> getTurns();
-    TurnDTO getTurnByTurnNumber(int turnNumber);
-    int getCurrentTurnNumber();
-    TurnDTO getCurrentTurn();
+    int getCurrentRoundNumber();
+    int getStockOfEntityByEntityIdAndRoundNumber(UUID entityId, int roundNumber);
+    int getTotalAmountOfDeliveryByEntityIdAndRoundNumber(UUID entityId, int roundNumber);
+    int getTotalAmountOfBacklogByEntityIdAndRoundNumber(UUID entityId, int roundNumber);
+    int getTotalAmountOfOrderByEntityIdAndRoundNumber(UUID entityId, int roundNumber);
 }

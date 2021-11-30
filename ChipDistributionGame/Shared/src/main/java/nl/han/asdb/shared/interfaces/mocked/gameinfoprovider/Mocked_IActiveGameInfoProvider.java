@@ -7,29 +7,28 @@ import java.util.List;
 import java.util.UUID;
 
 public class Mocked_IActiveGameInfoProvider implements IActiveGameInfoProvider {
-
     @Override
-    public UUID getCurrentGameID() {
-        return null;
-    }
-
-    @Override
-    public List<TurnDTO> getTurns() {
-        return null;
-    }
-
-    @Override
-    public TurnDTO getTurnByTurnNumber(int turnNumber) {
-        return null;
-    }
-
-    @Override
-    public int getCurrentTurnNumber() {
+    public int getCurrentRoundNumber() {
         return 0;
     }
 
     @Override
-    public TurnDTO getCurrentTurn() {
-        return null;
+    public int getStockOfEntityByEntityIdAndRoundNumber(UUID entityId, int roundNumber) {
+        return 0;
+    }
+
+    @Override
+    public int getTotalAmountOfDeliveryByEntityIdAndRoundNumber(UUID entityId, int roundNumber) {
+        return 0;
+    }
+
+    @Override
+    public int getTotalAmountOfBacklogByEntityIdAndRoundNumber(UUID entityId, int roundNumber) {
+        return 0;
+    }
+
+    @Override
+    public int getTotalAmountOfOrderByEntityIdAndRoundNumber(UUID entityId, int roundNumber) {
+        return 0;
     }
 }
