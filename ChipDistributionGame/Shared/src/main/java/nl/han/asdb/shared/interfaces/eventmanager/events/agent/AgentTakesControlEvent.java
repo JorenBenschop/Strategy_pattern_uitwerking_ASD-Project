@@ -1,18 +1,22 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.agent;
 
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 
 import java.util.UUID;
 
-public class GiveControlToAgentEvent extends Event{
+public class AgentTakesControlEvent extends Event{
     private UUID agentUuid;
+    private UUID playerId;
 
-    public GiveControlToAgentEvent(){
+    public AgentTakesControlEvent(){
+        this.eventType = EventType.AgentTakesControlEvent;
     }
 
-    public GiveControlToAgentEvent(UUID eventUuid, UUID agentUuid){
+    public AgentTakesControlEvent(UUID eventUuid, UUID agentUuid){
         super(eventUuid);
         this.agentUuid = agentUuid;
+        this.eventType = EventType.AgentTakesControlEvent;
     }
 
     public UUID getAgentUUID() {
