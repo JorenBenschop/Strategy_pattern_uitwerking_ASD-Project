@@ -8,35 +8,35 @@ import java.util.List;
 import java.util.UUID;
 
 public class SellChipsEvent extends Event {
-    private UUID uuid;
+    private UUID sellerUuid;
     private UUID buyerUuid;
     private double amount;
     private double pricePerItem;
     private short round;
-    private List<SellChipsEvent>saleEventItemList;
+    private List<SellChipsEvent> sellEventItemList;
 
     public SellChipsEvent(){
         this.eventType = EventType.SellChipsEvent;
     }
 
-    public SellChipsEvent(UUID eventUuid, UUID uuid, UUID buyerUuid, double amount, double pricePerItem, short round) {
+    public SellChipsEvent(UUID eventUuid, UUID sellerUuid, UUID buyerUuid, double amount, double pricePerItem, short round) {
         super(eventUuid);
-        this.uuid = uuid;
+        this.sellerUuid = sellerUuid;
         this.buyerUuid = buyerUuid;
         this.amount = amount;
         this.pricePerItem = pricePerItem;
         this.round = round;
-        this.saleEventItemList = new ArrayList<>();
+        this.sellEventItemList = new ArrayList<>();
         this.eventType = EventType.SellChipsEvent;
 
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public UUID getSellerUuid() {
+        return sellerUuid;
     }
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
+    public void setSellerUuid(UUID sellerUuid) {
+        this.sellerUuid = sellerUuid;
     }
 
     public UUID getBuyerUuid() {
