@@ -3,7 +3,7 @@ package nl.han.asdb.shared.interfaces.mocked.eventmanager;
 import nl.han.asdb.shared.interfaces.eventmanager.IEventManager;
 import nl.han.asdb.shared.interfaces.eventmanager.IListener;
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
-import nl.han.asdb.shared.interfaces.eventmanager.events.game.SellChipsEvent;
+import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 
 public class Mocked_IListener implements IListener {
     private boolean isUpdateFired = false;
@@ -19,8 +19,6 @@ public class Mocked_IListener implements IListener {
     }
 
     public void main(){
-        SellChipsEvent event = new SellChipsEvent();
-        event.setAmount((short) 1000);
-        this.eventManager.subscribe(event, this);
+        this.eventManager.subscribe(EventType.SellChipsEvent, this);
     }
 }

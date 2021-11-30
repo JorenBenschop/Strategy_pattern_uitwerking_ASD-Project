@@ -6,22 +6,22 @@ import nl.han.asdb.shared.dto.agenthostservice.agentrule.agentcondition.AgentCon
 import java.util.List;
 
 public class AgentRuleDTO {
-    private List<AgentConditionDTO> conditions;
+    private AgentConditionDTO conditions;
     private List<IAgentActionDTO> actions;
 
     public AgentRuleDTO() {
     }
 
-    public AgentRuleDTO(List<AgentConditionDTO> conditions, List<IAgentActionDTO> actions) {
+    public AgentRuleDTO(AgentConditionDTO conditions, List<IAgentActionDTO> actions) {
         this.conditions = conditions;
         this.actions = actions;
     }
 
-    public List<AgentConditionDTO> getConditions() {
+    public AgentConditionDTO getConditions() {
         return conditions;
     }
 
-    public void setConditions(List<AgentConditionDTO> conditions) {
+    public void setConditions(AgentConditionDTO conditions) {
         this.conditions = conditions;
     }
 
