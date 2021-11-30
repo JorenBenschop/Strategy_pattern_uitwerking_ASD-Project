@@ -21,7 +21,7 @@
     <dependencies>
         <dependency>
             <groupId>nl.han.asdb</groupId>
-            <artifactId>Shared</artifactId>
+            <artifactId>GameruleProvider</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
