@@ -1,6 +1,7 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.connections;
 
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 
 import java.util.UUID;
 
@@ -10,6 +11,7 @@ public class SearchForGameEvent extends Event {
     private UUID peerUuid;
 
     public SearchForGameEvent(){
+        this.eventType = EventType.SearchForGameEvent;
     }
 
     public SearchForGameEvent(UUID eventUuid, String peerIp, String ownIp, UUID peerUuid) {
@@ -17,6 +19,7 @@ public class SearchForGameEvent extends Event {
         this.peerIp = peerIp;
         this.ownIp = ownIp;
         this.peerUuid = peerUuid;
+        this.eventType = EventType.SearchForGameEvent;
     }
 
     public String getPeerIp() {

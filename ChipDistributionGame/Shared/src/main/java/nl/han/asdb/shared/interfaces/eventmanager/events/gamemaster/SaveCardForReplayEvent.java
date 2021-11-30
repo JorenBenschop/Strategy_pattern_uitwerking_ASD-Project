@@ -1,6 +1,7 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.gamemaster;
 
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 
 import java.util.UUID;
 
@@ -9,12 +10,14 @@ public class SaveCardForReplayEvent extends Event{
     private short round;
 
     public SaveCardForReplayEvent(){
+        this.eventType = EventType.SaveCardForReplayEvent;
     }
 
     public SaveCardForReplayEvent(UUID eventUuid, String card, short round) {
         super(eventUuid);
         this.card = card;
         this.round = round;
+        this.eventType = EventType.SaveCardForReplayEvent;
     }
 
     public String getCard() {

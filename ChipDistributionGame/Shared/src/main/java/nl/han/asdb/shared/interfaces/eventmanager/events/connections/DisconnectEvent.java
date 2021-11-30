@@ -1,6 +1,7 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.connections;
 
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 
 import java.util.UUID;
 
@@ -9,11 +10,13 @@ public class DisconnectEvent extends Event{
     private String ip;
 
     public DisconnectEvent(){
+        this.eventType = EventType.DisconnectEvent;
     }
 
     public DisconnectEvent(UUID eventUuid, UUID uuid, String ip){
         super(eventUuid);
         this.uuid = uuid;
+        this.eventType = EventType.DisconnectEvent;
     }
 
     public UUID getUuid() {

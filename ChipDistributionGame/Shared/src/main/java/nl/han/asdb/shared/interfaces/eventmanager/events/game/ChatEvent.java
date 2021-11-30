@@ -1,6 +1,8 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
+
 import java.util.*;
 
 public class ChatEvent extends Event {
@@ -8,18 +10,20 @@ public class ChatEvent extends Event {
     private UUID senderUuid;
     private String chatText;
     private short round;
-    Date tijd = new Date();
+    Date time = new Date();
 
     public ChatEvent(){
+        this.eventType = EventType.ChatEvent;
     }
 
-    public ChatEvent(UUID eventUuid, UUID recipientUuid, UUID senderUuid, String chatText, short round, Date tijd) {
+    public ChatEvent(UUID eventUuid, UUID recipientUuid, UUID senderUuid, String chatText, short round, Date time) {
         super(eventUuid);
         this.recipientUuid = recipientUuid;
         this.senderUuid = senderUuid;
         this.chatText = chatText;
         this.round = round;
-        this.tijd = tijd;
+        this.time = time;
+        this.eventType = EventType.ChatEvent;
     }
 
     public UUID getRecipientUuid() {
@@ -54,11 +58,11 @@ public class ChatEvent extends Event {
         this.round = round;
     }
 
-    public Date getTijd() {
-        return tijd;
+    public Date getTime() {
+        return time;
     }
 
-    public void setTijd(Date tijd) {
-        this.tijd = tijd;
+    public void setTime(Date time) {
+        this.time = time;
     }
 }

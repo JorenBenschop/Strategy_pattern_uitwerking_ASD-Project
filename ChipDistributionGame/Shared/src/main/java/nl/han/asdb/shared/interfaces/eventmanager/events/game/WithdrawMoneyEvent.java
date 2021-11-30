@@ -2,6 +2,7 @@ package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 
 
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 
 import java.util.UUID;
 
@@ -10,13 +11,16 @@ public class WithdrawMoneyEvent extends Event {
     private double amount;
     private short round;
 
-    public WithdrawMoneyEvent(){}
+    public WithdrawMoneyEvent(){
+        this.eventType = EventType.WithdrawMoneyEvent;
+    }
 
     public WithdrawMoneyEvent(UUID eventUuid, UUID targetUuid, double amount, short round) {
         super(eventUuid);
         this.targetUuid = targetUuid;
         this.amount = amount;
         this.round = round;
+        this.eventType = EventType.WithdrawMoneyEvent;
     }
 
     public UUID getTargetUuid() {
