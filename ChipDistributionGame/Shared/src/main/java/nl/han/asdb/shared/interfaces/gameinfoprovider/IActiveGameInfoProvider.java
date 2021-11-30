@@ -5,8 +5,7 @@ import nl.han.asdb.shared.dto.gameservice.turn.TurnDTO;
 import java.util.List;
 import java.util.UUID;
 
-public interface IGameInfoProvider {
-    boolean isGameActive();
+public interface IActiveGameInfoProvider {
     UUID getCurrentGameID();
     List<TurnDTO> getTurns();
     TurnDTO getTurnByTurnNumber(int turnNumber);

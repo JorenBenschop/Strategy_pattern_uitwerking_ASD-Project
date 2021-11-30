@@ -1,16 +1,12 @@
 package nl.han.asdb.shared.interfaces.mocked.gameinfoprovider;
 
 import nl.han.asdb.shared.dto.gameservice.turn.TurnDTO;
-import nl.han.asdb.shared.interfaces.gameinfoprovider.IGameInfoProvider;
+import nl.han.asdb.shared.interfaces.gameinfoprovider.IActiveGameInfoProvider;
 
 import java.util.List;
 import java.util.UUID;
 
-public class Mocked_IGameInfoProvider implements IGameInfoProvider {
-    @Override
-    public boolean isGameActive() {
-        return false;
-    }
+public class Mocked_IActiveGameInfoProvider implements IActiveGameInfoProvider {
 
     @Override
     public UUID getCurrentGameID() {
