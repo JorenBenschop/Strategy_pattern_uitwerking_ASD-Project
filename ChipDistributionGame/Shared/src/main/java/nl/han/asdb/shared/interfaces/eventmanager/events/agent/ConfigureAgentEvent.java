@@ -6,31 +6,32 @@ import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
 import java.util.UUID;
 
 public class ConfigureAgentEvent extends Event {
-    private UUID agentUuid;
-    private AgentDTO agentDTO;
+
+    private UUID playerId;
+    private String agentDTO; // string
 
     public ConfigureAgentEvent(){
     }
 
-    public ConfigureAgentEvent(UUID eventUuid, UUID agentUuid, AgentDTO agentDTO){
+    public ConfigureAgentEvent(UUID eventUuid, UUID agentUuid, String agentDTO){
         super(eventUuid);
-        this.agentUuid = agentUuid;
+        this.playerId = agentUuid;
         this.agentDTO = agentDTO;
     }
 
     public UUID getAgentUuid() {
-        return agentUuid;
+        return playerId;
     }
 
     public void setAgentUuid(UUID agentUuid) {
-        this.agentUuid = agentUuid;
+        this.playerId = agentUuid;
     }
 
-    public AgentDTO getAgentDTO() {
+    public String getAgentDTO() {
         return agentDTO;
     }
 
-    public void setAgentDTO(AgentDTO agentDTO) {
+    public void setAgentDTO(String agentDTO) {
         this.agentDTO = agentDTO;
     }
 }
