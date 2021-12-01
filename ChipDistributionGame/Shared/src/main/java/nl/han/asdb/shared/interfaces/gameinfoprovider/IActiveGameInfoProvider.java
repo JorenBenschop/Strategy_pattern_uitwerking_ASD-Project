@@ -1,8 +1,5 @@
 package nl.han.asdb.shared.interfaces.gameinfoprovider;
 
-import nl.han.asdb.shared.dto.gameservice.turn.TurnDTO;
-
-import java.util.List;
 import java.util.UUID;
 
 public interface IActiveGameInfoProvider {
