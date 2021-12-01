@@ -55,7 +55,7 @@ public class OrderChipsEvent extends Event {
         return pricePerItem;
     }
 
-    public void setPricePerItem(short pricePerItem) {
+    public void setPricePerItem(double pricePerItem) {
         this.pricePerItem = pricePerItem;
     }
 

@@ -59,7 +59,7 @@ public class SellChipsEvent extends Event {
         return pricePerItem;
     }
 
-    public void setPricePerItem(short pricePerItem) {
+    public void setPricePerItem(double pricePerItem) {
         this.pricePerItem = pricePerItem;
     }
 
