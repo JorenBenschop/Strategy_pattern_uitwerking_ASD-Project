@@ -13,7 +13,6 @@ public class SellChipsEvent extends Event {
     private double amount;
     private double pricePerItem;
     private short round;
-    private List<SellChipsEvent> sellEventItemList;
 
     public SellChipsEvent(){
         this.eventType = EventType.SellChipsEvent;
@@ -26,9 +25,7 @@ public class SellChipsEvent extends Event {
         this.amount = amount;
         this.pricePerItem = pricePerItem;
         this.round = round;
-        this.sellEventItemList = new ArrayList<>();
         this.eventType = EventType.SellChipsEvent;
-
     }
 
     public UUID getSellerUuid() {

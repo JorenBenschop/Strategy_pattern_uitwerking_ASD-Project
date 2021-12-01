@@ -1,8 +1,5 @@
 package nl.han.asdb.shared.dto.agenthostservice.agentrule.agentaction;
 
-import nl.han.asdb.shared.interfaces.eventmanager.events.game.SellChipsEvent;
-
-import java.util.List;
 import java.util.UUID;
 
 public class AgentSellActionDTO implements IAgentActionDTO {
@@ -10,17 +7,15 @@ public class AgentSellActionDTO implements IAgentActionDTO {
     private double amount;
     private double pricePerItem;
     private short round;
-    private List<SellChipsEvent> sellEventItemList;
 
     public AgentSellActionDTO() {
     }
 
-    public AgentSellActionDTO(UUID sellerUuid, double amount, double pricePerItem, short round, List<SellChipsEvent> sellEventItemList) {
+    public AgentSellActionDTO(UUID sellerUuid, double amount, double pricePerItem, short round) {
         this.sellerUuid = sellerUuid;
         this.amount = amount;
         this.pricePerItem = pricePerItem;
         this.round = round;
-        this.sellEventItemList = sellEventItemList;
     }
 
     @Override
@@ -61,13 +56,5 @@ public class AgentSellActionDTO implements IAgentActionDTO {
     @Override
     public void setPricePerItem(double price) {
         this.pricePerItem = price;
-    }
-
-    public List<SellChipsEvent> getSellEventItemList() {
-        return sellEventItemList;
-    }
-
-    public void setSellEventItemList(List<SellChipsEvent> sellEventItemList) {
-        this.sellEventItemList = sellEventItemList;
     }
 }

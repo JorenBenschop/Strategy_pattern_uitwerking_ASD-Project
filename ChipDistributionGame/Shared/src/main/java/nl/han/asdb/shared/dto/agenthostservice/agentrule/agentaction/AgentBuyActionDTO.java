@@ -8,7 +8,6 @@ public class AgentBuyActionDTO implements IAgentActionDTO {
     private double pricePerItem;
     private short round;
 
-
     public AgentBuyActionDTO(UUID buyerUuid, double amount, double pricePerItem, short round) {
         this.buyerUuid = buyerUuid;
         this.amount = amount;
@@ -55,6 +54,4 @@ public class AgentBuyActionDTO implements IAgentActionDTO {
     public void setPricePerItem(double price) {
         this.pricePerItem = price;
     }
-
-
 }
