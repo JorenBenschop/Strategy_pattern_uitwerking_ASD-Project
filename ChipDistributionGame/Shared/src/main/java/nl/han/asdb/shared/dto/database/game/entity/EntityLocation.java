@@ -1,4 +1,4 @@
-package nl.han.asdb.shared.dto.gameservice.turn.entity;
+package nl.han.asdb.shared.dto.database.game.entity;
 
 public enum EntityLocation {
     FACTORY,
