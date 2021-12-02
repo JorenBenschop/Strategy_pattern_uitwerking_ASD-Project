@@ -1,9 +1,8 @@
 package nl.han.asdb.shared.interfaces.database;
 
 import nl.han.asdb.shared.dto.agenthostservice.AgentDTO;
-import nl.han.asdb.shared.dto.database.GameDTO;
-import nl.han.asdb.shared.dto.database.PlayerDTO;
-import nl.han.asdb.shared.dto.database.RoundDTO;
+import nl.han.asdb.shared.dto.database.game.GameDTO;
+import nl.han.asdb.shared.dto.database.round.RoundDTO;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -25,5 +24,4 @@ public interface IDatabase {
             int amount
     );
     void addAgent(UUID player, AgentDTO agent);
-    void addPlayer(PlayerDTO player);
 }
