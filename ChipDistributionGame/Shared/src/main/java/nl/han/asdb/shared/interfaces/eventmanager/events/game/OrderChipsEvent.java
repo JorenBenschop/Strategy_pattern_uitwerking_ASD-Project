@@ -1,21 +1,18 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
-
-import java.util.UUID;
-
 import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 
-public class OrderChipsEvent extends Event {
-    private UUID buyerUuid;
-    private UUID sellerUuid;
-    private double amount;
-    private double pricePerItem;
-    private short round;
+import java.util.*;
 
-    public OrderChipsEvent(){
-        this.eventType = EventType.OrderChipsEvent;
-    }
+
+
+public class OrderChipsEvent extends Event {
+    private final UUID buyerUuid;
+    private final UUID sellerUuid;
+    private final double amount;
+    private final double pricePerItem;
+    private final short round;
 
     public OrderChipsEvent(UUID eventUuid, UUID buyerUuid, UUID sellerUuid, double amount, double pricePerItem, short round) {
         super(eventUuid);
@@ -31,39 +28,19 @@ public class OrderChipsEvent extends Event {
         return buyerUuid;
     }
 
-    public void setBuyerUuid(UUID buyerUuid) {
-        this.buyerUuid = buyerUuid;
-    }
-
     public UUID getSellerUuid() {
         return sellerUuid;
-    }
-
-    public void setSellerUuid(UUID sellerUuid) {
-        this.sellerUuid = sellerUuid;
     }
 
     public double getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
     public double getPricePerItem() {
         return pricePerItem;
     }
 
-    public void setPricePerItem(double pricePerItem) {
-        this.pricePerItem = pricePerItem;
-    }
-
     public short getRound() {
         return round;
-    }
-
-    public void setRound(short round) {
-        this.round = round;
     }
 }

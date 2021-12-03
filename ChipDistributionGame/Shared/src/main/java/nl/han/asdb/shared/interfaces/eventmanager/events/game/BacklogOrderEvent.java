@@ -3,17 +3,13 @@ package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
 import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 
-import java.util.UUID;
+import java.util.*;
 
 public class BacklogOrderEvent extends Event {
-    private UUID sellerUuid;
-    private UUID buyerUuid;
-    private short backlogAmount;
-    private short round;
-
-    public BacklogOrderEvent(){
-        this.eventType = EventType.BacklogOrderEvent;
-    }
+    private final UUID sellerUuid;
+    private final UUID buyerUuid;
+    private final short backlogAmount;
+    private final short round;
 
     public BacklogOrderEvent(UUID eventUuid, UUID sellerUuid, UUID buyerUuid, short backlogAmount, short round) {
         super(eventUuid);
@@ -28,31 +24,16 @@ public class BacklogOrderEvent extends Event {
         return sellerUuid;
     }
 
-    public void setSellerUuid(UUID sellerUuid) {
-        this.sellerUuid = sellerUuid;
-    }
-
     public UUID getBuyerUuid() {
         return buyerUuid;
-    }
-
-    public void setBuyerUuid(UUID buyerUuid) {
-        this.buyerUuid = buyerUuid;
     }
 
     public short getBacklogAmount() {
         return backlogAmount;
     }
 
-    public void setBacklogAmount(short backlogAmount) {
-        this.backlogAmount = backlogAmount;
-    }
-
     public short getRound() {
         return round;
     }
 
-    public void setRound(short round) {
-        this.round = round;
-    }
 }

@@ -6,13 +6,9 @@ import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 import java.util.*;
 
 public class ConfigureGameEvent extends Event {
-    private UUID uuid;
+    private final UUID uuid;
     private List<String> peerIPs =new ArrayList<String>();
-    HashMap<String, String> settings = new HashMap<String, String>();
-
-    public ConfigureGameEvent(){
-        this.eventType = EventType.ConfigureGameEvent;
-    }
+    private HashMap<String, String> settings = new HashMap<String, String>();
 
     public ConfigureGameEvent(UUID eventUuid, UUID uuid, List<String> peerIPs, HashMap<String, String> settings) {
         super(eventUuid);
@@ -22,27 +18,13 @@ public class ConfigureGameEvent extends Event {
         this.eventType = EventType.ConfigureGameEvent;
     }
 
-    public UUID getUuid() {
-        return uuid;
-    }
-
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }
+    public UUID getUuid() { return uuid; }
 
     public List<String> getPeerIPs() {
         return peerIPs;
     }
 
-    public void setPeerIPs(List<String> peerIPs) {
-        this.peerIPs = peerIPs;
-    }
-
     public HashMap<String, String> getSettings() {
         return settings;
-    }
-
-    public void setSettings(HashMap<String, String> settings) {
-        this.settings = settings;
     }
 }

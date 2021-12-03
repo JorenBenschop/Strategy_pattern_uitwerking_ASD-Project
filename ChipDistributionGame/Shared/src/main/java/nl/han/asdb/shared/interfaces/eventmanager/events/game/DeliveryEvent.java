@@ -3,19 +3,16 @@ package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
 import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 
-import java.util.UUID;
+import java.util.*;
 
 public class DeliveryEvent extends Event {
-    UUID entityId;
-    int amount;
+    private final UUID entityId;
+    private final short amount;
 
-    public DeliveryEvent(UUID eventId, UUID entityId, int amount) {
-        super(eventId);
+    public DeliveryEvent(UUID eventUuid, UUID entityId, short amount) {
+        super(eventUuid);
         this.entityId = entityId;
         this.amount = amount;
-        this.eventType = EventType.DeliveryEvent;
-    }
-    public DeliveryEvent() {
         this.eventType = EventType.DeliveryEvent;
     }
 
@@ -23,15 +20,7 @@ public class DeliveryEvent extends Event {
         return entityId;
     }
 
-    public void setEntityId(UUID entityId) {
-        this.entityId = entityId;
-    }
-
     public int getAmount() {
         return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
     }
 }

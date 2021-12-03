@@ -3,14 +3,10 @@ package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
 import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 
-import java.util.UUID;
+import java.util.*;
 
 public class ReplayGameEvent extends Event {
-    private UUID uuid;
-
-    public ReplayGameEvent(){
-        this.eventType = EventType.ReplayGameEvent;
-    }
+    private final UUID uuid;
 
     public ReplayGameEvent(UUID eventUuid, UUID uuid) {
         super(eventUuid);
@@ -20,9 +16,5 @@ public class ReplayGameEvent extends Event {
 
     public UUID getUuid() {
         return uuid;
-    }
-
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
     }
 }
