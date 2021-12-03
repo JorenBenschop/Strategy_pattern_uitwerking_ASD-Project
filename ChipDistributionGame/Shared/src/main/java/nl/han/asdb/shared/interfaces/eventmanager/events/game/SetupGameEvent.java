@@ -3,15 +3,11 @@ package nl.han.asdb.shared.interfaces.eventmanager.events.game;
 import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
 import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 
-import java.util.UUID;
+import java.util.*;
 
 public class SetupGameEvent extends Event {
-    private UUID uuid;
-    private String ip;
-
-    public SetupGameEvent(){
-        this.eventType = EventType.SetupGameEvent;
-    }
+    private final UUID uuid;
+    private final String ip;
 
     public SetupGameEvent(UUID eventUuid, UUID uuid, String ip) {
         super(eventUuid);
@@ -24,15 +20,7 @@ public class SetupGameEvent extends Event {
         return uuid;
     }
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }
-
     public String getIp() {
         return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
     }
 }

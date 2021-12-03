@@ -6,16 +6,13 @@ import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 import java.util.UUID;
 
 public class StartAgentEvent extends Event{
-    private UUID agentUuid;
-    private UUID playerId;
+    private final UUID agentUuid;
+    private final UUID playerId;
 
-    public StartAgentEvent(){
-        this.eventType = EventType.StartAgentEvent;
-    }
-
-    public StartAgentEvent(UUID eventUuid, UUID agentUuid){
+    public StartAgentEvent(UUID eventUuid, UUID agentUuid, UUID playerId){
         super(eventUuid);
         this.agentUuid = agentUuid;
+        this.playerId = playerId;
         this.eventType = EventType.StartAgentEvent;
     }
 
@@ -23,7 +20,5 @@ public class StartAgentEvent extends Event{
         return agentUuid;
     }
 
-    public void setAgentUuid(UUID agentUuid) {
-        this.agentUuid = agentUuid;
-    }
+    public UUID getPlayerId() {return playerId;}
 }

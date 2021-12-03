@@ -6,12 +6,8 @@ import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 import java.util.UUID;
 
 public class ConfigureAgentEvent extends Event {
-    private UUID playerId;
-    private String agentCode; // string
-
-    public ConfigureAgentEvent(){
-        this.eventType = EventType.ConfigureAgentEvent;
-    }
+    private final UUID playerId;
+    private final String agentCode; // string
 
     public ConfigureAgentEvent(UUID eventUuid, UUID agentUuid, String agentCode){
         super(eventUuid);
@@ -24,15 +20,7 @@ public class ConfigureAgentEvent extends Event {
         return playerId;
     }
 
-    public void setAgentUuid(UUID agentUuid) {
-        this.playerId = agentUuid;
-    }
-
     public String getAgentCode() {
         return agentCode;
-    }
-
-    public void setAgentCode(String agentCode) {
-        this.agentCode = agentCode;
     }
 }

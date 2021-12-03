@@ -6,16 +6,13 @@ import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 import java.util.UUID;
 
 public class DisconnectEvent extends Event{
-    private UUID uuid;
-    private String ip;
-
-    public DisconnectEvent(){
-        this.eventType = EventType.DisconnectEvent;
-    }
+    private final UUID uuid;
+    private final String ip;
 
     public DisconnectEvent(UUID eventUuid, UUID uuid, String ip){
         super(eventUuid);
         this.uuid = uuid;
+        this.ip = ip;
         this.eventType = EventType.DisconnectEvent;
     }
 
@@ -23,15 +20,7 @@ public class DisconnectEvent extends Event{
         return uuid;
     }
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
-    }
-
     public String getIp() {
         return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
     }
 }

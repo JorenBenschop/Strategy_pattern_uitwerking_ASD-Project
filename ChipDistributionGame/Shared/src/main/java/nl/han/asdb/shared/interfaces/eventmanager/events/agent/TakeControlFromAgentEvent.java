@@ -6,16 +6,13 @@ import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 import java.util.UUID;
 
 public class TakeControlFromAgentEvent extends Event {
-    private UUID agentUuid;
-    private UUID playerId;
+    private final UUID agentUuid;
+    private final UUID playerId;
 
-    public TakeControlFromAgentEvent(){
-        this.eventType = EventType.TakeControlFromAgentEvent;
-    }
-
-    public TakeControlFromAgentEvent(UUID eventUuid, UUID agentUuid){
+    public TakeControlFromAgentEvent(UUID eventUuid, UUID agentUuid, UUID playerId){
         super(eventUuid);
         this.agentUuid = agentUuid;
+        this.playerId = playerId;
         this.eventType = EventType.TakeControlFromAgentEvent;
     }
 
@@ -23,7 +20,5 @@ public class TakeControlFromAgentEvent extends Event {
         return agentUuid;
     }
 
-    public void setAgentUuid(UUID agentUuid) {
-        this.agentUuid = agentUuid;
-    }
+    public UUID getPlayerId() {return playerId;}
 }

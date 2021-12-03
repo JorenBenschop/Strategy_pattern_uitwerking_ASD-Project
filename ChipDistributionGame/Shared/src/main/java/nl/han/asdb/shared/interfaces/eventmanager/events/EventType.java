@@ -13,7 +13,6 @@ public enum EventType {
     ChatEvent,
     ConfigureGameEvent,
     JoinGameEvent,
-    LeaveGameEvent,
     OrderChipsEvent,
     ReplayGameEvent,
     SellChipsEvent,
