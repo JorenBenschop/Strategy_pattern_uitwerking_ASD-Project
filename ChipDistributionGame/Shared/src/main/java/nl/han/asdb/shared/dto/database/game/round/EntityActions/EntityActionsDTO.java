@@ -1,12 +1,15 @@
-package nl.han.asdb.shared.dto.database.round.EntityActions;
+package nl.han.asdb.shared.dto.database.game.round.EntityActions;
 
+import nl.han.asdb.shared.dto.database.game.GameDTO;
+import nl.han.asdb.shared.dto.database.game.entity.EntityDTO;
 import nl.han.asdb.shared.dto.database.game.entity.EntityType;
-import nl.han.asdb.shared.dto.database.round.EntityActions.backlog.BacklogDTO;
-import nl.han.asdb.shared.dto.database.round.EntityActions.delivery.DeliveryDTO;
-import nl.han.asdb.shared.dto.database.round.EntityActions.order.OrderDTO;
+import nl.han.asdb.shared.dto.database.game.round.EntityActions.backlog.BacklogDTO;
+import nl.han.asdb.shared.dto.database.game.round.EntityActions.delivery.DeliveryDTO;
+import nl.han.asdb.shared.dto.database.game.round.EntityActions.order.OrderDTO;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class EntityActionsDTO {
     private UUID entityId;
@@ -84,5 +87,11 @@ public class EntityActionsDTO {
 
     public void setOrders(List<OrderDTO> orders) {
         this.orders = orders;
+    }
+
+    public void setNewIncomingOrder(OrderDTO order){orders.add(order);}
+
+    public EntityDTO getEntityFromID(UUID entityId, GameDTO gameDTO){
+        return gameDTO.getEntities().stream().filter(EntityDTO -> EntityDTO.getEntityId().equals(entityId)).toList().get(0);
     }
 }

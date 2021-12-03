@@ -1,6 +1,6 @@
-package nl.han.asdb.shared.dto.database.round;
+package nl.han.asdb.shared.dto.database.game.round;
 
-import nl.han.asdb.shared.dto.database.round.EntityActions.EntityActionsDTO;
+import nl.han.asdb.shared.dto.database.game.round.EntityActions.EntityActionsDTO;
 
 import java.util.List;
 
