@@ -2,7 +2,7 @@ package nl.han.asdb.shared.interfaces.mocked.database;
 
 import nl.han.asdb.shared.dto.agenthostservice.AgentDTO;
 import nl.han.asdb.shared.dto.database.game.GameDTO;
-import nl.han.asdb.shared.dto.database.round.RoundDTO;
+import nl.han.asdb.shared.dto.database.game.round.RoundDTO;
 import nl.han.asdb.shared.interfaces.database.IDatabase;
 
 import java.util.ArrayList;

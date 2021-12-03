@@ -1,4 +1,4 @@
-package nl.han.asdb.shared.dto.database.round.EntityActions.order;
+package nl.han.asdb.shared.dto.database.game.round.EntityActions.order;
 
 import java.util.UUID;
 
