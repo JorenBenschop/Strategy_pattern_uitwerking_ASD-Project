@@ -3,11 +3,19 @@ package nl.han.asdb.shared.dto.agenthostservice.agentrule.agentaction;
 import java.util.UUID;
 
 public interface IAgentActionDTO {
-    int getAmount();
+    double getAmount();
 
-    void setAmount(int amount);
+    void setAmount(double amount);
 
-    UUID getPerson();
+    UUID getUuid();
 
     void setUUID(UUID uuid);
+
+    short getRound();
+
+    void setRound(short round);
+
+    double getPricePerItem();
+
+    void setPricePerItem(double price);
 }

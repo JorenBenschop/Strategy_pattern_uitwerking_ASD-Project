@@ -1,17 +1,19 @@
-package nl.han.asdb.shared.dto.database.round.EntityActions.backlog;
+package nl.han.asdb.shared.dto.database.game.round.EntityActions.delivery;
 
 import java.util.UUID;
 
-public class BacklogDTO {
+public class DeliveryDTO {
     private UUID receiverId;
     private int amount;
+    private int amountAsked;
 
-    public BacklogDTO() {
+    public DeliveryDTO() {
     }
 
-    public BacklogDTO(UUID receiverId, int amount) {
+    public DeliveryDTO(UUID receiverId, int amount, int amountAsked) {
         this.receiverId = receiverId;
         this.amount = amount;
+        this.amountAsked = amountAsked;
     }
 
     public UUID getReceiverId() {
@@ -28,5 +30,13 @@ public class BacklogDTO {
 
     public void setAmount(int amount) {
         this.amount = amount;
+    }
+
+    public int getAmountAsked() {
+        return amountAsked;
+    }
+
+    public void setAmountAsked(int amountAsked) {
+        this.amountAsked = amountAsked;
     }
 }
