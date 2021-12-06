@@ -4,6 +4,7 @@ import java.util.UUID;
 
 public class AgentSellActionDTO implements IAgentActionDTO {
     private UUID sellerUuid;
+    private UUID buyerUuid;
     private double amount;
     private double pricePerItem;
     private short round;
@@ -29,13 +30,23 @@ public class AgentSellActionDTO implements IAgentActionDTO {
     }
 
     @Override
-    public UUID getUuid() {
+    public UUID getSellerUuid() {
         return sellerUuid;
     }
 
     @Override
-    public void setUUID(UUID uuid) {
-        this.sellerUuid = uuid;
+    public void setSellerUuid(UUID sellerUuid) {
+        this.sellerUuid = sellerUuid;
+    }
+
+    @Override
+    public UUID getBuyerUuid() {
+        return buyerUuid;
+    }
+
+    @Override
+    public void setBuyerUuid(UUID buyerUuid) {
+        this.buyerUuid = buyerUuid;
     }
 
     @Override
