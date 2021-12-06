@@ -7,9 +7,13 @@ public interface IAgentActionDTO {
 
     void setAmount(double amount);
 
-    UUID getUuid();
+    UUID getBuyerUuid();
 
-    void setUUID(UUID uuid);
+    void setBuyerUuid(UUID uuid);
+
+    UUID getSellerUuid();
+
+    void setSellerUuid(UUID uuid);
 
     short getRound();
 

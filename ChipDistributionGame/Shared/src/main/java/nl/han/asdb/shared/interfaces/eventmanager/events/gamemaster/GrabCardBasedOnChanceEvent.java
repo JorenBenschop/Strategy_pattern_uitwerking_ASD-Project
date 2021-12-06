@@ -9,10 +9,6 @@ public class GrabCardBasedOnChanceEvent extends Event{
     private double calculatedChance;
     private short round;
 
-    public GrabCardBasedOnChanceEvent(){
-        this.eventType = EventType.GrabCardBasedOnChanceEvent;
-    }
-
     public GrabCardBasedOnChanceEvent(UUID eventUuid, double calculatedChance, short round) {
         super(eventUuid);
         this.calculatedChance = calculatedChance;
