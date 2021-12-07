@@ -94,4 +94,13 @@ public class EntityActionsDTO {
     public EntityDTO getEntityFromID(UUID entityId, GameDTO gameDTO){
         return gameDTO.getEntities().stream().filter(EntityDTO -> EntityDTO.getEntityId().equals(entityId)).toList().get(0);
     }
+    public OrderDTO getLatestOrder(){
+        return this.getOrders().get(this.getOrders().size()-1);
+    }
+    public OrderDTO getFirstOrder(){
+        return this.getOrders().get(0);
+    }
+    public DeliveryDTO getFirstDelivery(){
+        return this.getDeliveries().get(0);
+    }
 }

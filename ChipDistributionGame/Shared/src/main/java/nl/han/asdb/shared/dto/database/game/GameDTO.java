@@ -1,9 +1,13 @@
 package nl.han.asdb.shared.dto.database.game;
 
 import nl.han.asdb.shared.dto.database.game.entity.EntityDTO;
+import nl.han.asdb.shared.dto.database.game.entity.EntityLocation;
+import nl.han.asdb.shared.dto.database.game.round.EntityActions.EntityActionsDTO;
 import nl.han.asdb.shared.dto.database.game.round.RoundDTO;
 
 import java.util.List;
+import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class GameDTO {
     private int gameId;
@@ -88,5 +92,24 @@ public class GameDTO {
 
     public void setEntities(List<EntityDTO> entities) {
         this.entities = entities;
+    }
+
+    public void addNewRound(RoundDTO newRound){rounds.add(newRound);}
+
+    public EntityDTO getEntityFromID(UUID entityID){
+        return entities.stream().filter(entityDTO -> entityDTO.getEntityId().equals(entityID)).collect(Collectors.toList()).get(0);
+    }
+    public RoundDTO getLatestTurns(){
+        return this.getRounds().get(this.getRounds().size() - 1);
+    }
+    public EntityActionsDTO getLatestEntityActions(UUID entityID){
+        List<EntityActionsDTO> latestEntityAction = this.getRounds().get(this.getRounds().size() - 1).getEntityActions().stream().filter(entityDTO -> entityDTO.getEntityId().equals(entityID)).toList();
+        if(latestEntityAction.isEmpty())
+            latestEntityAction = this.getRounds().get(this.getRounds().size() - 2).getEntityActions().stream().filter(entityDTO -> entityDTO.getEntityId().equals(entityID)).toList();
+        return latestEntityAction.get(0);
+    }
+
+    public EntityLocation getLocationFromEntity(UUID entityID){
+        return this.getEntityFromID(entityID).getEntityLocation();
     }
 }
