@@ -27,6 +27,13 @@ public class GameDTO {
         this.entities = entities;
     }
 
+    public GameDTO(int gameId, GameType gameType, boolean isActive, List<EntityDTO> entities) {
+        this.gameId = gameId;
+        this.gameType = gameType;
+        this.isActive = isActive;
+        this.entities = entities;
+    }
+
     public int getGameId() {
         return gameId;
     }
