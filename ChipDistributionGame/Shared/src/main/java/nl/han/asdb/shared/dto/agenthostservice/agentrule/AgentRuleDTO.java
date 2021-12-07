@@ -1,20 +1,20 @@
 package nl.han.asdb.shared.dto.agenthostservice.agentrule;
 
-import nl.han.asdb.shared.dto.agenthostservice.agentrule.agentaction.IAgentActionDTO;
 import nl.han.asdb.shared.dto.agenthostservice.agentrule.agentcondition.AgentConditionDTO;
+import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
 
 import java.util.List;
 
 public class AgentRuleDTO {
     private AgentConditionDTO conditions;
-    private List<IAgentActionDTO> actions;
+    private List<Event> events;
 
     public AgentRuleDTO() {
     }
 
-    public AgentRuleDTO(AgentConditionDTO conditions, List<IAgentActionDTO> actions) {
+    public AgentRuleDTO(AgentConditionDTO conditions, List<Event> events) {
         this.conditions = conditions;
-        this.actions = actions;
+        this.events = events;
     }
 
     public AgentConditionDTO getConditions() {
@@ -25,11 +25,11 @@ public class AgentRuleDTO {
         this.conditions = conditions;
     }
 
-    public List<IAgentActionDTO> getActions() {
-        return actions;
+    public List<Event> getEvents() {
+        return events;
     }
 
-    public void setActions(List<IAgentActionDTO> actions) {
-        this.actions = actions;
+    public void setEvents(List<Event> events) {
+        this.events = events;
     }
 }
