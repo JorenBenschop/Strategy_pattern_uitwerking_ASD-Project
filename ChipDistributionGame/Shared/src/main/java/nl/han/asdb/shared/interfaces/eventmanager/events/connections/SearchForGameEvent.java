@@ -22,11 +22,11 @@ public class SearchForGameEvent extends Event {
         return peerIp;
     }
 
-    public String getOwnIP() {
+    public String getOwnIp() {
         return ownIp;
     }
 
-    public UUID getPeerUUID() {
+    public UUID getPeerUuid() {
         return peerUuid;
     }
 }

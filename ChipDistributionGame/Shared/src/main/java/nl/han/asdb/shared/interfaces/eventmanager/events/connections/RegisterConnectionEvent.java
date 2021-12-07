@@ -18,7 +18,7 @@ public class RegisterConnectionEvent extends Event {
         this.eventType = EventType.RegisterConnectionEvent;
     }
 
-    public String getPeerIP() {
+    public String getPeerIp() {
         return peerIp;
     }
 
