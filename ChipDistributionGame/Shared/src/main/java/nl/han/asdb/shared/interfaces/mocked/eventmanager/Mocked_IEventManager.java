@@ -34,7 +34,7 @@ public class Mocked_IEventManager implements IEventManager {
     }
 
     @Override
-    public void notify(Event event) throws EventNotFoundException {
+    public void notify(Event event) {
         if(this.listenersForEvents.containsKey(event.getEventType())){
             this.listenersForEvents.get(event.getEventType()).forEach((listener -> listener.update(event)));
             return;
