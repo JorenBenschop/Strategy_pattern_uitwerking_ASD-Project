@@ -23,4 +23,6 @@ public enum EventType {
     StartGameEvent,
     StopGameEvent,
     WithdrawMoneyEvent,
+    SaveCardForReplayEvent,
+    GrabCardBasedOnChanceEvent,
 }
