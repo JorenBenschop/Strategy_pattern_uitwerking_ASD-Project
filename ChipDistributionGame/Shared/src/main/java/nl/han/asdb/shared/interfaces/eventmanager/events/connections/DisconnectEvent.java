@@ -6,21 +6,21 @@ import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 import java.util.UUID;
 
 public class DisconnectEvent extends Event{
-    private final UUID uuid;
-    private final String ip;
+    private final UUID playerId;
+    private final String ownIp;
 
-    public DisconnectEvent(UUID eventUuid, UUID uuid, String ip){
+    public DisconnectEvent(UUID eventUuid, UUID playerId, String ownIp){
         super(eventUuid);
-        this.uuid = uuid;
-        this.ip = ip;
+        this.playerId = playerId;
+        this.ownIp = ownIp;
         this.eventType = EventType.DisconnectEvent;
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public UUID getplayerId() {
+        return playerId;
     }
 
-    public String getIp() {
-        return ip;
+    public String getOwnIp() {
+        return ownIp;
     }
 }

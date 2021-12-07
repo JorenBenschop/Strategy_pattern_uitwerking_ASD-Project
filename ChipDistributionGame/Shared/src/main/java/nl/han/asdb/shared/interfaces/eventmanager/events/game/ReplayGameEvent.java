@@ -6,15 +6,15 @@ import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 import java.util.*;
 
 public class ReplayGameEvent extends Event {
-    private final UUID uuid;
+    private final UUID playerId;
 
-    public ReplayGameEvent(UUID eventUuid, UUID uuid) {
+    public ReplayGameEvent(UUID eventUuid, UUID playerId) {
         super(eventUuid);
-        this.uuid = uuid;
+        this.playerId = playerId;
         this.eventType = EventType.ReplayGameEvent;
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public UUID getPlayerId() {
+        return playerId;
     }
 }

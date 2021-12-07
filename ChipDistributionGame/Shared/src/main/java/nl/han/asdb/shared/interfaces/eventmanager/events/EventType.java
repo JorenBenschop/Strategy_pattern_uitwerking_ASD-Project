@@ -1,8 +1,9 @@
 package nl.han.asdb.shared.interfaces.eventmanager.events;
 
 public enum EventType {
-    ConfigureAgentEvent,
+    AgentGoThroughRulesEvent,
     AgentTakesControlEvent,
+    ConfigureAgentEvent,
     StartAgentEvent,
     TakeControlFromAgentEvent,
     DisconnectEvent,
@@ -12,7 +13,9 @@ public enum EventType {
     BacklogOrderEvent,
     ChatEvent,
     ConfigureGameEvent,
+    DeliveryEvent,
     JoinGameEvent,
+    LeaveGameEvent,
     OrderChipsEvent,
     ReplayGameEvent,
     SellChipsEvent,
@@ -20,8 +23,4 @@ public enum EventType {
     StartGameEvent,
     StopGameEvent,
     WithdrawMoneyEvent,
-    GrabCardBasedOnChanceEvent,
-    SaveCardForReplayEvent,
-    DeliveryEvent,
-    AgentGoThroughRulesEvent,
 }

@@ -16,7 +16,7 @@ public class AgentTakesControlEvent extends Event{
         this.eventType = EventType.AgentTakesControlEvent;
     }
 
-    public UUID getAgentUUID() {
+    public UUID getAgentUuid() {
         return agentUuid;
     }
 

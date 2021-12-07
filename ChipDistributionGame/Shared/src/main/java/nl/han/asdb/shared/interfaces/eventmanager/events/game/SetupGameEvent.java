@@ -6,18 +6,18 @@ import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 import java.util.*;
 
 public class SetupGameEvent extends Event {
-    private final UUID uuid;
+    private final UUID playerId;
     private final String ip;
 
-    public SetupGameEvent(UUID eventUuid, UUID uuid, String ip) {
+    public SetupGameEvent(UUID eventUuid, UUID playerId, String ip) {
         super(eventUuid);
-        this.uuid = uuid;
+        this.playerId = playerId;
         this.ip = ip;
         this.eventType = EventType.SetupGameEvent;
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public UUID getPlayerId() {
+        return playerId;
     }
 
     public String getIp() {
