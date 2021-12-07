@@ -6,18 +6,18 @@ import nl.han.asdb.shared.interfaces.eventmanager.events.EventType;
 import java.util.*;
 
 public class LeaveGameEvent extends Event {
-    private final UUID uuid;
+    private final UUID playerId;
     private List<String> peerIPs = new ArrayList<String>();
 
-    public LeaveGameEvent(UUID eventUuid, UUID uuid, List<String> peerIPs) {
+    public LeaveGameEvent(UUID eventUuid, UUID playerId, List<String> peerIPs) {
         super(eventUuid);
-        this.uuid = uuid;
+        this.playerId = playerId;
         this.peerIPs = peerIPs;
-        this.eventType = EventType.JoinGameEvent;
+        this.eventType = EventType.LeaveGameEvent;
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public UUID getPlayerId() {
+        return playerId;
     }
 
     public List<String> getPeerIPs() {
