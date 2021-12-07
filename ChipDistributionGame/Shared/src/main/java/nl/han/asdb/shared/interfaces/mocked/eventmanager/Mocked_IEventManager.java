@@ -39,6 +39,5 @@ public class Mocked_IEventManager implements IEventManager {
             this.listenersForEvents.get(event.getEventType()).forEach((listener -> listener.update(event)));
             return;
         }
-        throw new EventNotFoundException("The event of eventType: " + event + " could not be found in the Listener list.");
     }
 }
