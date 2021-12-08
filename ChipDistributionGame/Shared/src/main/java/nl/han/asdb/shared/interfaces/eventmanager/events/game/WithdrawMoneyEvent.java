@@ -7,13 +7,13 @@ import java.util.*;
 
 public class WithdrawMoneyEvent extends Event {
     private final UUID entityId;
-    private final double amount;
+    private final double priceAmount;
     private final short round;
 
-    public WithdrawMoneyEvent(UUID eventUuid, UUID entityId, double amount, short round) {
+    public WithdrawMoneyEvent(UUID eventUuid, UUID entityId, double priceAmount, short round) {
         super(eventUuid);
         this.entityId = entityId;
-        this.amount = amount;
+        this.priceAmount = priceAmount;
         this.round = round;
         this.eventType = EventType.WithdrawMoneyEvent;
     }
@@ -22,8 +22,8 @@ public class WithdrawMoneyEvent extends Event {
         return entityId;
     }
 
-    public double getAmount() {
-        return amount;
+    public double getPriceAmount() {
+        return priceAmount;
     }
 
     public short getRound() {

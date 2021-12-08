@@ -7,8 +7,8 @@ public class checkSynchoniseGameEvent {
 
     checker c = new checker();
 
-    public void checkAnEvent(SynchroniseGameEvent event) {
-        c.checkPeerIp(event.getPlayerId());
-        c.checkPeerUuid(event.getAgentUuid());
+    public void checkAnEvent(SychroniseGameEvent event) {
+        c.checkPeerIps(event.getPeerIps());
+        c.checkAgentUuid(event.getAgentUUID());
     }
 }

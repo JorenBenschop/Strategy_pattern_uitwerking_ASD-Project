@@ -8,6 +8,7 @@ public class checkDisconnectEvent {
     checker c = new checker();
 
     public void checkAnEvent(DisconnectEvent event) {
-        c.checkPlayerUuid(event.getPlayerId());
-        c.checkPlayerIp(event.getPlayerIp());
+        c.checkPlayerUuid(event.getplayerId());
+        c.checkPlayerIp(event.getOwnIp());
     }
+}

@@ -8,6 +8,6 @@ public class checkStartAgentEvent {
 
     public void checkAnEvent(StartAgentEvent event) {
         c.checkAgentUuid(event.getAgentUuid());
-        c.checkPlayerUuid(event.getPlayerUuid());
+        c.checkPlayerUuid(event.getPlayerId());
     }
 }

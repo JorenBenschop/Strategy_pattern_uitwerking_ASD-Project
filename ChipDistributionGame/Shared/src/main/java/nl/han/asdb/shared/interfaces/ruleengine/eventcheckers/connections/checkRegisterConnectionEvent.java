@@ -7,8 +7,8 @@ public class checkRegisterConnectionEvent {
     checker c = new checker();
 
     public void checkAnEvent(RegisterConnectionEvent event) {
-        c.checkPlayerIp(event.getAgentUuid());
-        c.checkPeerIp(event.getPlayerId());
+        c.checkPlayerIp(event.getOwnIp());
+        c.checkPeerIp(event.getPeerIp());
         c.checkPeerUuid(event.getPeerUuid());
     }
 }

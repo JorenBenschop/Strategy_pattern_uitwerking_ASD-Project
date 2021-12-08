@@ -60,6 +60,11 @@ public class checker {
         return false;
     }
 
+    public boolean checkPeerIps(List<String> peerIps){
+
+        return false;
+    }
+
     public boolean checkBacklogValidity(short backlog){
 
         return false;
@@ -71,6 +76,16 @@ public class checker {
     }
 
     public boolean checkOrderAmountValidity(short orderAmount){
+
+        return false;
+    }
+
+    public boolean checkPriceAmountValidity(double priceAmount){
+
+        return false;
+    }
+
+    public boolean checkPricePerItem(double pricePerItem){
 
         return false;
     }
@@ -102,5 +117,7 @@ public class checker {
     public void checkAgentCode(String agentCode){
 
     }
+
+    public void checkSettings(HashMap<String, String> settings)
 
 }

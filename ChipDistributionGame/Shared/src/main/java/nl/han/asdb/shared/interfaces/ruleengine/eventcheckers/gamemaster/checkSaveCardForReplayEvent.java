@@ -1,10 +1,13 @@
 package nl.han.asdb.shared.interfaces.ruleengine.eventcheckers.gamemaster;
 
-import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+import nl.han.asdb.shared.interfaces.eventmanager.events.gamemaster.SaveCardForReplayEvent;
+import nl.han.asdb.shared.interfaces.ruleengine.checker;
 
-public class checkSaveCardForReplayEvent implements checkEvent {
-    @Override
-    public boolean checkAnEvent(Event event) {
-        return false;
+public class checkSaveCardForReplayEvent {
+    checker c = new checker();
+
+    public void checkAnEvent(SaveCardForReplayEvent event) {
+        c.checkCardExists(event.getCard());
+        c.checkRoundValidity(event.getRound());
     }
 }

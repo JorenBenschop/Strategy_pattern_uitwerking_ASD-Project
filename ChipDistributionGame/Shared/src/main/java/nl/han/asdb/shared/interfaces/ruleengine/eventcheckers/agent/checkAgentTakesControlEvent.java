@@ -9,7 +9,7 @@ public class checkAgentTakesControlEvent  {
 
     public void checkAnEvent(AgentTakesControlEvent event) {
         c.checkAgentUuid(event.getAgentUuid());
-        c.checkPlayerUuid(event.getPlayerUuid());
+        c.checkPlayerUuid(event.getPlayerId());
     }
 
 }

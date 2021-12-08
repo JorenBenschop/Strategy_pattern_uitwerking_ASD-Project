@@ -6,8 +6,8 @@ import nl.han.asdb.shared.interfaces.ruleengine.checker;
 public class checkTakeControlFromAgentEvent {
     checker c = new checker();
 
-    public void checkAnEvent(TakeControlFromAgent event) {
+    public void checkAnEvent(TakeControlFromAgentEvent event) {
         c.checkAgentUuid(event.getAgentUuid());
-        c.checkPlayerUuid(event.getPlayerUuid());
+        c.checkPlayerUuid(event.getPlayerId());
     }
 }

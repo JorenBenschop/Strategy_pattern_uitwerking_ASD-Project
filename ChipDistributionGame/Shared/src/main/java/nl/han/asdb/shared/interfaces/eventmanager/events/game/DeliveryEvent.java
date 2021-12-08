@@ -7,12 +7,12 @@ import java.util.*;
 
 public class DeliveryEvent extends Event {
     private final UUID entityId;
-    private final short amount;
+    private final short orderAmount;
 
-    public DeliveryEvent(UUID eventUuid, UUID entityId, short amount) {
+    public DeliveryEvent(UUID eventUuid, UUID entityId, short orderAmount) {
         super(eventUuid);
         this.entityId = entityId;
-        this.amount = amount;
+        this.orderAmount = orderAmount;
         this.eventType = EventType.DeliveryEvent;
     }
 
@@ -20,7 +20,7 @@ public class DeliveryEvent extends Event {
         return entityId;
     }
 
-    public int getAmount() {
-        return amount;
+    public short getOrderAmount() {
+        return orderAmount;
     }
 }

@@ -9,6 +9,7 @@ public class checkBacklogOrderEvent {
     public void checkAnEvent(BacklogOrderEvent event) {
         c.checkSellerUuid(event.getSellerUuid());
         c.checkBuyerUuid(event.getBuyerUuid());
-        c.checkPeerUuid(event.get());
+        c.checkBacklogValidity(event.getBacklogAmount());
+        c.checkRoundValidity(event.getRound());
     }
 }

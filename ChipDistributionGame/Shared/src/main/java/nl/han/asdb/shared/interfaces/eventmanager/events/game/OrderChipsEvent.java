@@ -10,15 +10,15 @@ import java.util.*;
 public class OrderChipsEvent extends Event {
     private final UUID buyerUuid;
     private final UUID sellerUuid;
-    private final double amount;
+    private final short orderAmount;
     private final double pricePerItem;
     private final short round;
 
-    public OrderChipsEvent(UUID eventUuid, UUID buyerUuid, UUID sellerUuid, double amount, double pricePerItem, short round) {
+    public OrderChipsEvent(UUID eventUuid, UUID buyerUuid, UUID sellerUuid, short orderAmount, double pricePerItem, short round) {
         super(eventUuid);
         this.buyerUuid = buyerUuid;
         this.sellerUuid = sellerUuid;
-        this.amount = amount;
+        this.orderAmount = orderAmount;
         this.pricePerItem = pricePerItem;
         this.round = round;
         this.eventType = EventType.OrderChipsEvent;
@@ -32,8 +32,8 @@ public class OrderChipsEvent extends Event {
         return sellerUuid;
     }
 
-    public double getAmount() {
-        return amount;
+    public short getOrderAmount() {
+        return orderAmount;
     }
 
     public double getPricePerItem() {
