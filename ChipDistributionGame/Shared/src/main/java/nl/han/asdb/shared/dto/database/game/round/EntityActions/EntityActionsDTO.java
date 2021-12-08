@@ -103,4 +103,5 @@ public class EntityActionsDTO {
     public DeliveryDTO getFirstDelivery(){
         return this.getDeliveries().get(0);
     }
+    public DeliveryDTO getLatestDelivery(){return this.getDeliveries().get(this.getDeliveries().size()-1);}
 }
