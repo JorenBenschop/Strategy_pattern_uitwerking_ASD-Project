@@ -1,11 +1,13 @@
 package nl.han.asdb.shared.interfaces.ruleengine.eventcheckers.game;
 
-import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
-import nl.han.asdb.shared.interfaces.ruleengine.checkEvent;
+import nl.han.asdb.shared.interfaces.eventmanager.events.game.WithdrawMoneyEvent;
+import nl.han.asdb.shared.interfaces.ruleengine.checker;
 
-public class checkWithdrawMoneyEvent implements checkEvent {
-    @Override
-    public boolean checkAnEvent(Event event) {
-        return false;
+public class checkWithdrawMoneyEvent {
+
+    checker c = new checker();
+
+    public void checkAnEvent(WithdrawMoneyEvent event) {
+        c.checkAgentUuid((event.getAgentUuid()));
     }
 }

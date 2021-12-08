@@ -1,11 +1,13 @@
 package nl.han.asdb.shared.interfaces.ruleengine.eventcheckers.agent;
 
-import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
-import nl.han.asdb.shared.interfaces.ruleengine.checkEvent;
+import nl.han.asdb.shared.interfaces.eventmanager.events.agent.StartAgentEvent;
+import nl.han.asdb.shared.interfaces.ruleengine.checker;
 
-public class checkStartAgentEvent implements checkEvent {
-    @Override
-    public boolean checkAnEvent(Event event) {
-        return false;
+public class checkStartAgentEvent {
+    checker c = new checker();
+
+    public void checkAnEvent(StartAgentEvent event) {
+        c.checkAgentUuid(event.getAgentUuid());
+        c.checkPlayerUuid(event.getPlayerUuid());
     }
 }

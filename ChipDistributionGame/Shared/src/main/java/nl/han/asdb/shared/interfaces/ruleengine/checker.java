@@ -1,13 +1,13 @@
 package nl.han.asdb.shared.interfaces.ruleengine;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.UUID;
 
 public class checker {
 
-    public boolean checkAgentUuid(UUID agentUuid) {
+    public void checkAgentUuid(UUID agentUuid) {
 
-        return false;
     }
 
     public boolean checkPlayerUuid(UUID playerUuid) {
@@ -93,6 +93,14 @@ public class checker {
     public boolean checkCardExists(String card){
 
         return false;
+    }
+
+    public void checkRules(HashMap<String, String> rules){
+
+    }
+
+    public void checkAgentCode(String agentCode){
+
     }
 
 }
