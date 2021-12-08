@@ -40,4 +40,9 @@ public class Mocked_IEventManager implements IEventManager {
             return;
         }
     }
+
+    @Override
+    public HashMap<EventType, ArrayList<IListener>> getListenersForEvents() {
+        return this.listenersForEvents;
+    }
 }
