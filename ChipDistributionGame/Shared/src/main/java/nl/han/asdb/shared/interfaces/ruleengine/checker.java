@@ -2,6 +2,7 @@ package nl.han.asdb.shared.interfaces.ruleengine;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.List;
 import java.util.UUID;
 
 public class checker {
@@ -118,6 +119,8 @@ public class checker {
 
     }
 
-    public void checkSettings(HashMap<String, String> settings)
+    public void checkSettings(HashMap<String, String> settings){
+
+    }
 
 }
