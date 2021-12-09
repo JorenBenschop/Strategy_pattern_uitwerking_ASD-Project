@@ -2,7 +2,6 @@ package nl.han.asdb.dependencycontainer;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Singleton;
-import nl.han.asdb.shared.interfaces.eventmanager.IEventManager;
 
 public class DependencyContainer extends AbstractModule {
     @Override

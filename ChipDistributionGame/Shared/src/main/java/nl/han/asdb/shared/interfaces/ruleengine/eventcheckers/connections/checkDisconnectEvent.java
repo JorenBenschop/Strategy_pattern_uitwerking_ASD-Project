@@ -1,14 +1,14 @@
 package nl.han.asdb.shared.interfaces.ruleengine.eventcheckers.connections;
 
-import nl.han.asdb.shared.interfaces.eventmanager.events.connections.DisconnectEvent;
-import nl.han.asdb.shared.interfaces.ruleengine.checker;
+import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+import nl.han.asdb.shared.interfaces.ruleengine.EventValueIncompleteException;
+import nl.han.asdb.shared.interfaces.ruleengine.IcheckerStrategy;
 
+public class checkDisconnectEvent implements IcheckerStrategy {
 
-public class checkDisconnectEvent {
-    checker c = new checker();
-
-    public void checkAnEvent(DisconnectEvent event) {
-        c.checkPlayerUuid(event.getplayerId());
-        c.checkPlayerIp(event.getOwnIp());
+    @Override
+    public void checkAnEvent(Event event) throws EventValueIncompleteException {
+        Checker.checkPlayerUuid(event.getplayerId());
+        Checker.checkPlayerIp(event.getOwnIp());
     }
 }

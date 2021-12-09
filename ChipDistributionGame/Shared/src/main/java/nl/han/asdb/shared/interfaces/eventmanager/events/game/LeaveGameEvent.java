@@ -7,7 +7,7 @@ import java.util.*;
 
 public class LeaveGameEvent extends Event {
     private final UUID playerId;
-    private List<String> peerIPs = new ArrayList<String>();
+    private List<String> peerIPs;
 
     public LeaveGameEvent(UUID eventUuid, UUID playerId, List<String> peerIPs) {
         super(eventUuid);

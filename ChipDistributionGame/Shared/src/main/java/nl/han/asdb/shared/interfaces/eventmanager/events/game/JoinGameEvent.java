@@ -8,7 +8,7 @@ import java.util.*;
 public class JoinGameEvent extends Event{
     private final UUID playerId;
     private final UUID GameUuid;
-    private List<String> peerIPs = new ArrayList<String>();
+    private List<String> peerIPs;
 
     public JoinGameEvent(UUID eventUuid, UUID playerId, UUID gameUuid, List<String> peerIPs) {
         super(eventUuid);

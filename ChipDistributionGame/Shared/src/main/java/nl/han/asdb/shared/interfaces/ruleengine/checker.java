@@ -1,126 +1,187 @@
 package nl.han.asdb.shared.interfaces.ruleengine;
 
 import java.time.LocalDateTime;
-import java.util.HashMap;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 public class checker {
-
-    public void checkAgentUuid(UUID agentUuid) {
-
+    public void checkAgentUuid(UUID agentUuid) throws EventValueIncompleteException {
+        //kijken of de uuid klopt
+        if (agentUuid != null) {
+        } else {
+            throw new EventValueIncompleteException("Variable agentUuid incomplete");
+        }
     }
 
-    public boolean checkPlayerUuid(UUID playerUuid) {
-
-        return false;
+    public void checkPlayerUuid(UUID playerUuid) throws EventValueIncompleteException {
+        //kijken of de uuid klopt
+        if (playerUuid != null) {
+        } else {
+            throw new EventValueIncompleteException("Variable playerUuid incomplete");
+        }
     }
 
-    public boolean checkBuyerUuid(UUID buyerUuid) {
-
-        return false;
+    public void checkAgentRules(HashMap rules) throws EventValueIncompleteException {
+        if (rules.isEmpty()) {
+        } else {
+            throw new EventValueIncompleteException("Variable agentUuid incomplete");
+        }
     }
 
-    public boolean checkSellerUuid(UUID sellerUuid) {
-
-        return false;
+    public void checkAgentCode(String agentCode) throws EventValueIncompleteException {
+        //kijken of de agentcode klopt
+        if (agentCode != null) {
+        } else {
+            throw new EventValueIncompleteException("Variable agentCode incomplete");
+        }
     }
 
-    public boolean checkRecipientUuid(UUID recipientUuid) {
-
-        return false;
+    public void checkPlayerIp(String ownIp) throws EventValueIncompleteException {
+        //kijken of de ip klopt
+        if (ownIp != null) {
+        } else {
+            throw new EventValueIncompleteException("Variable ownIp incomplete");
+        }
     }
 
-    public boolean checkSenderUuid(UUID senderUuid) {
-
-        return false;
+    public void checkPeerIp(String peerIp) throws EventValueIncompleteException {
+        if (peerIp != null) {
+        } else {
+            throw new EventValueIncompleteException("Variable peerIp incomplete");
+        }
     }
 
-    public boolean checkEntityUuid(UUID entityUuid) {
-
-        return false;
+    public void checkPeerUuid(UUID peerUuid) throws EventValueIncompleteException {
+        if (peerUuid != null) {
+        } else {
+            throw new EventValueIncompleteException("Variable peerUuid incomplete");
+        }
     }
 
-    public boolean checkGameUuid(UUID gameUuid) {
-
-        return false;
+    public void checkPeerIps(List<String> peerIps) throws EventValueIncompleteException {
+        if (peerIps.isEmpty()) {
+        } else {
+            throw new EventValueIncompleteException("Variable peerIps incomplete");
+        }
     }
 
-    public boolean checkPeerUuid(UUID peerUuid) {
-
-        return false;
+    public void checkSellerUuid(UUID sellerUuid) throws EventValueIncompleteException {
+        if (sellerUuid != null) {
+        } else {
+            throw new EventValueIncompleteException("Variable sellerUuid incomplete");
+        }
     }
 
-    public boolean checkPlayerIp(String ownIp){
-
-        return false;
+    public void checkBuyerUuid(UUID buyerUuid) throws EventValueIncompleteException {
+        if (buyerUuid != null) {
+        } else {
+            throw new EventValueIncompleteException("Variable buyerUuid incomplete");
+        }
     }
 
-    public boolean checkPeerIp(String peerIp){
-
-        return false;
+    public void checkBacklogValidity(short backlog) throws EventValueIncompleteException {
+        if (backlog >= 0 && backlog <= 30) {
+        } else {
+            throw new EventValueIncompleteException("Variable backlog incomplete");
+        }
     }
 
-    public boolean checkPeerIps(List<String> peerIps){
-
-        return false;
+    public void checkRoundValidity(short round) throws EventValueIncompleteException {
+        //check of de ronde klopt
+        if (round >= 0 && round <= 30) {
+        } else {
+            throw new EventValueIncompleteException("Variable AgentUuid incomplete");
+        }
     }
 
-    public boolean checkBacklogValidity(short backlog){
-
-        return false;
+    public void checkOrderAmountValidity(short orderAmount) throws EventValueIncompleteException {
+        if (orderAmount >= 0 && orderAmount <= 10000) {
+        } else {
+            throw new EventValueIncompleteException("Variable orderAmount incomplete");
+        }
     }
 
-    public boolean checkRoundValidity(short round){
-
-        return false;
+    public void checkValidMessage(String message) throws EventValueIncompleteException {
+        if (message != null) {
+        } else {
+            throw new EventValueIncompleteException("Variable message incomplete");
+        }
     }
 
-    public boolean checkOrderAmountValidity(short orderAmount){
-
-        return false;
+    public void checkTimeDate(LocalDateTime localDateTime) throws EventValueIncompleteException {
+        LocalDateTime dateTimeCheck = LocalDateTime.parse("2021-01-01T00:00:00.000");
+        if (localDateTime.isAfter(dateTimeCheck)) {
+        } else {
+            throw new EventValueIncompleteException("Variable TimeDate incomplete");
+        }
     }
 
-    public boolean checkPriceAmountValidity(double priceAmount){
-
-        return false;
+    public void checkChanceEventWithinBounds(double chanceValue) throws EventValueIncompleteException {
+        if (chanceValue >= 0 && chanceValue <= 1) {
+        } else {
+            throw new EventValueIncompleteException("Variable AgentUuid incomplete");
+        }
     }
 
-    public boolean checkPricePerItem(double pricePerItem){
-
-        return false;
+    public void checkCardExists(String card) throws EventValueIncompleteException {
+        if (card != null) {
+        } else {
+            throw new EventValueIncompleteException("Variable card incomplete");
+        }
     }
 
-    public boolean checkValidMessage(String message){
-
-        return false;
+    public void checkRecipientUuid(UUID recipientUuid) throws EventValueIncompleteException {
+        if (recipientUuid != null) {
+        } else {
+            throw new EventValueIncompleteException("Variable recipientUuid incomplete");
+        }
     }
 
-    public boolean checkTimeDate(LocalDateTime TimeDate){
-
-        return false;
+    public void checkSenderUuid(UUID senderUuid) throws EventValueIncompleteException {
+        if (senderUuid != null) {
+        } else {
+            throw new EventValueIncompleteException("Variable senderUuid incomplete");
+        }
     }
 
-    public boolean checkChanceEventWithinBounds(double chanceValue) {
-
-        return false;
+    public void checkEntityUuid(UUID entityUuid) throws EventValueIncompleteException {
+        if (entityUuid != null) {
+        } else {
+            throw new EventValueIncompleteException("Variable entityUuid incomplete");
+        }
     }
 
-    public boolean checkCardExists(String card){
-
-        return false;
+    public void checkGameUuid(UUID gameUuid) throws EventValueIncompleteException {
+        if (gameUuid != null) {
+        } else {
+            throw new EventValueIncompleteException("Variable gameUuid incomplete");
+        }
     }
 
-    public void checkRules(HashMap<String, String> rules){
-
+    public void checkPriceAmountValidity(double priceAmount) throws EventValueIncompleteException {
+        if (priceAmount >= 0.00 && priceAmount <= 1000.00) {
+        } else {
+            throw new EventValueIncompleteException("Variable AgentUuid incomplete");
+        }
     }
 
-    public void checkAgentCode(String agentCode){
-
+    public void checkPricePerItem(double pricePerItem) throws EventValueIncompleteException {
+        if (pricePerItem >= 0.00 && pricePerItem <= 1000.00) {
+        } else {
+            throw new EventValueIncompleteException("Variable AgentUuid incomplete");
+        }
     }
 
-    public void checkSettings(HashMap<String, String> settings){
-
+    public void checkSettings(HashMap<String, String> settings) throws EventValueIncompleteException {
+        if (settings.isEmpty()) {
+        } else {
+            throw new EventValueIncompleteException("Variable settings incomplete");
+        }
     }
 
+    public void checkAgentName(String agentName) throws EventValueIncompleteException {
+        if (agentName != null) {
+        } else {
+            throw new EventValueIncompleteException("Variable agentName incomplete");
+        }
+    }
 }

@@ -19,7 +19,7 @@ public class ChatEvent extends Event {
         this.senderUuid = senderUuid;
         this.chatText = chatText;
         this.round = round;
-        this.time = time;
+        this.time = LocalDateTime.now();
         this.eventType = EventType.ChatEvent;
     }
 

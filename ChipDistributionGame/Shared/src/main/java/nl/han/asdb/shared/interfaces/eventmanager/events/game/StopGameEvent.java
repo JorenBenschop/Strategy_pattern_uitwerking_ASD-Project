@@ -7,7 +7,7 @@ import java.util.*;
 
 public class StopGameEvent extends Event {
     private final UUID gameUuid;
-    private List<String> peerIPs=new ArrayList<String>();
+    private List<String> peerIPs;
 
     public StopGameEvent(UUID eventUuid, UUID gameUuid, List<String> peerIPs) {
         super(eventUuid);

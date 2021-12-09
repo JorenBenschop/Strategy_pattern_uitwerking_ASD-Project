@@ -1,16 +1,17 @@
 package nl.han.asdb.shared.interfaces.ruleengine.eventcheckers.game;
 
+import nl.han.asdb.shared.interfaces.ruleengine.EventValueIncompleteException;
 import nl.han.asdb.shared.interfaces.eventmanager.events.game.OrderChipsEvent;
-import nl.han.asdb.shared.interfaces.ruleengine.checker;
+import nl.han.asdb.shared.interfaces.ruleengine.IcheckerStrategy;
 
-public class checkOrderChipsEvent {
-    checker c = new checker();
+public class checkOrderChipsEvent implements IcheckerStrategy {
 
-    public void checkAnEvent(OrderChipsEvent event) {
-        c.checkSellerUuid(event.getSellerUuid());
-        c.checkBuyerUuid(event.getBuyerUuid());
-        c.checkOrderAmountValidity(event.getOrderAmount());
-        c.checkPricePerItem(event.getPricePerItem());
-        c.checkRoundValidity(event.getRound());
+    @Override
+    public void checkAnEvent(OrderChipsEvent event) throws EventValueIncompleteException {
+        Checker.checkSellerUuid(event.getSellerUuid());
+        Checker.checkBuyerUuid(event.getBuyerUuid());
+        Checker.checkOrderAmountValidity(event.getOrderAmount());
+        Checker.checkPricePerItem(event.getPricePerItem());
+        Checker.checkRoundValidity(event.getRound());
     }
 }

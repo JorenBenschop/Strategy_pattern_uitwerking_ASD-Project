@@ -8,7 +8,7 @@ import java.util.*;
 public class StartGameEvent extends Event {
     private final UUID playerId;
     private final String ip;
-    private List<String> peerIPs =new ArrayList<String>();
+    private List<String> peerIPs;
 
     public StartGameEvent(UUID eventUuid, UUID playerId, String ip, List<String> peerIPs) {
         super(eventUuid);

@@ -1,13 +1,14 @@
 package nl.han.asdb.shared.interfaces.ruleengine.eventcheckers.game;
 
+import nl.han.asdb.shared.interfaces.ruleengine.EventValueIncompleteException;
 import nl.han.asdb.shared.interfaces.eventmanager.events.game.SetupGameEvent;
-import nl.han.asdb.shared.interfaces.ruleengine.checker;
+import nl.han.asdb.shared.interfaces.ruleengine.IcheckerStrategy;
 
-public class checkSetupGameEvent {
-    checker c = new checker();
+public class checkSetupGameEvent implements IcheckerStrategy {
 
-    public void checkAnEvent(SetupGameEvent event) {
-        c.checkPlayerUuid(event.getPlayerId());
-        c.checkPlayerIp(event.getIp());
+    @Override
+    public void checkAnEvent(SetupGameEvent event) throws EventValueIncompleteException {
+        Checker.checkPlayerUuid(event.getPlayerId());
+        Checker.checkPlayerIp(event.getIp());
     }
 }

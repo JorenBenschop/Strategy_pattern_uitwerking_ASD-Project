@@ -1,15 +1,14 @@
 package nl.han.asdb.shared.interfaces.ruleengine.eventcheckers.agent;
 
-import nl.han.asdb.shared.interfaces.eventmanager.events.agent.AgentTakesControlEvent;
-import nl.han.asdb.shared.interfaces.ruleengine.checker;
+import nl.han.asdb.shared.interfaces.eventmanager.events.Event;
+import nl.han.asdb.shared.interfaces.ruleengine.EventValueIncompleteException;
+import nl.han.asdb.shared.interfaces.ruleengine.IcheckerStrategy;
 
-public class checkAgentTakesControlEvent  {
+public class checkAgentTakesControlEvent implements IcheckerStrategy {
 
-    checker c = new checker();
-
-    public void checkAnEvent(AgentTakesControlEvent event) {
-        c.checkAgentUuid(event.getAgentUuid());
-        c.checkPlayerUuid(event.getPlayerId());
+    @Override
+    public void checkAnEvent(Event event) throws EventValueIncompleteException {
+        Checker.checkAgentUuid(event.getAgentUuid());
+        Checker.checkPlayerUuid(event.getPlayerId());
     }
-
 }

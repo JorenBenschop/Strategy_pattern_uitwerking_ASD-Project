@@ -1,14 +1,15 @@
 package nl.han.asdb.shared.interfaces.ruleengine.eventcheckers.game;
 
+import nl.han.asdb.shared.interfaces.ruleengine.EventValueIncompleteException;
 import nl.han.asdb.shared.interfaces.eventmanager.events.game.WithdrawMoneyEvent;
-import nl.han.asdb.shared.interfaces.ruleengine.checker;
+import nl.han.asdb.shared.interfaces.ruleengine.IcheckerStrategy;
 
-public class checkWithdrawMoneyEvent {
-    checker c = new checker();
+public class checkWithdrawMoneyEvent implements IcheckerStrategy {
 
-    public void checkAnEvent(WithdrawMoneyEvent event) {
-        c.checkEntityUuid(event.getEntityId());
-        c.checkPriceAmountValidity(event.getPriceAmount());
-        c.checkRoundValidity(event.getRound());
+    @Override
+    public void checkAnEvent(WithdrawMoneyEvent event) throws EventValueIncompleteException {
+        Checker.checkEntityUuid(event.getEntityId());
+        Checker.checkPriceAmountValidity(event.getPriceAmount());
+        Checker.checkRoundValidity(event.getRound());
     }
 }

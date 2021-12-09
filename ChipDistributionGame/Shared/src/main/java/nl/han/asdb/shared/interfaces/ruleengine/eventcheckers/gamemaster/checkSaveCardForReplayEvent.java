@@ -1,13 +1,14 @@
 package nl.han.asdb.shared.interfaces.ruleengine.eventcheckers.gamemaster;
 
+import nl.han.asdb.shared.interfaces.ruleengine.EventValueIncompleteException;
 import nl.han.asdb.shared.interfaces.eventmanager.events.gamemaster.SaveCardForReplayEvent;
-import nl.han.asdb.shared.interfaces.ruleengine.checker;
+import nl.han.asdb.shared.interfaces.ruleengine.IcheckerStrategy;
 
-public class checkSaveCardForReplayEvent {
-    checker c = new checker();
+public class checkSaveCardForReplayEvent implements IcheckerStrategy {
 
-    public void checkAnEvent(SaveCardForReplayEvent event) {
-        c.checkCardExists(event.getCard());
-        c.checkRoundValidity(event.getRound());
+    @Override
+    public void checkAnEvent(SaveCardForReplayEvent event) throws EventValueIncompleteException {
+        Checker.checkCardExists(event.getCard());
+        Checker.checkRoundValidity(event.getRound());
     }
 }

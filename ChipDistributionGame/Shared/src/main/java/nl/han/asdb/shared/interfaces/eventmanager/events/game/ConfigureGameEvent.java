@@ -7,10 +7,10 @@ import java.util.*;
 
 public class ConfigureGameEvent extends Event {
     private final UUID playerId;
-    private List<String> peerIps =new ArrayList<String>();
-    private HashMap<String, String> settings = new HashMap<String, String>();
+    private List<String> peerIps;
+    private HashMap<String, String> settings;
 
-    public ConfigureGameEvent(UUID eventUuid, UUID playerId, List<String> peerIPs, HashMap<String, String> settings) {
+    public ConfigureGameEvent(UUID eventUuid, UUID playerId, List<String> peerIps, HashMap<String, String> settings) {
         super(eventUuid);
         this.playerId = playerId;
         this.peerIps = peerIps;

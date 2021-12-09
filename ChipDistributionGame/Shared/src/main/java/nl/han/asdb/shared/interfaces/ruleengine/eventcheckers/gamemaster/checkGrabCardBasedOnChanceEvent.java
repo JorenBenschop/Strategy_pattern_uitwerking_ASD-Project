@@ -1,13 +1,14 @@
 package nl.han.asdb.shared.interfaces.ruleengine.eventcheckers.gamemaster;
 
+import nl.han.asdb.shared.interfaces.ruleengine.EventValueIncompleteException;
 import nl.han.asdb.shared.interfaces.eventmanager.events.gamemaster.GrabCardBasedOnChanceEvent;
-import nl.han.asdb.shared.interfaces.ruleengine.checker;
+import nl.han.asdb.shared.interfaces.ruleengine.IcheckerStrategy;
 
-public class checkGrabCardBasedOnChanceEvent {
-    checker c = new checker();
+public class checkGrabCardBasedOnChanceEvent implements IcheckerStrategy {
 
-    public void checkAnEvent(GrabCardBasedOnChanceEvent event) {
-        c.checkChanceEventWithinBounds(event.getCalculatedChance());
-        c.checkRoundValidity(event.getRound());
+    @Override
+    public void checkAnEvent(GrabCardBasedOnChanceEvent event) throws EventValueIncompleteException {
+        Checker.checkChanceEventWithinBounds(event.getCalculatedChance());
+        Checker.checkRoundValidity(event.getRound());
     }
 }

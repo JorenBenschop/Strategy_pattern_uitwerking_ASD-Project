@@ -7,11 +7,15 @@ import java.util.UUID;
 
 public class ConfigureAgentEvent extends Event {
     private final UUID playerId;
-    private final String agentCode; // string
+    private final UUID agentUuid;
+    private final String agentName;
+    private final String agentCode;
 
-    public ConfigureAgentEvent(UUID eventUuid, UUID agentUuid, String agentCode){
+    public ConfigureAgentEvent(UUID eventUuid, UUID playerUuid, UUID agentUuid, String agentName, String agentCode){
         super(eventUuid);
-        this.playerId = agentUuid;
+        this.playerId = playerUuid;
+        this.agentUuid = agentUuid;
+        this.agentName = agentName;
         this.agentCode = agentCode;
         this.eventType = EventType.ConfigureAgentEvent;
     }
@@ -22,5 +26,13 @@ public class ConfigureAgentEvent extends Event {
 
     public String getAgentCode() {
         return agentCode;
+    }
+
+    public UUID getPlayerId() {
+        return agentUuid;
+    }
+
+    public String getAgentName() {
+        return agentName;
     }
 }
